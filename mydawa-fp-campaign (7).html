@@ -1,0 +1,1231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Use Your Insurance for Family Planning | MYDAWA x Jhpiego</title>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,300;0,400;0,700;1,300;1,500&family=DM+Sans:ital,wght@0,300;0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+<style>
+:root{
+  --teal:#00BCD4;
+  --teal-dark:#0097A7;
+  --teal-deeper:#006064;
+  --teal-pale:#E0F7FA;
+  --teal-light:#80DEEA;
+  --navy:#1A2A3A;
+  --navy-mid:#1E3A52;
+  --pink:#E91E8C;
+  --pink-dark:#C2185B;
+  --pink-pale:#FCE4EC;
+  --orange:#FF6B00;
+  --orange-dark:#E65100;
+  --orange-light:#FFF3E0;
+  --orange-pale:#FFF8F0;
+  --cream:#FAFDF9;
+  --white:#FFFFFF;
+  --gray:#5A6A74;
+  --gray-light:#EEF3F5;
+  --charcoal:#0D1B2A;
+  --green-soft:#D4F1EF;
+  --font-display:'Fraunces',serif;
+  --font-body:'DM Sans',sans-serif;
+  --radius:16px;
+  --shadow:0 4px 24px rgba(0,169,157,0.12);
+  --shadow-lg:0 12px 48px rgba(0,0,0,0.12);
+}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+html{scroll-behavior:smooth;}
+body{font-family:var(--font-body);background:var(--cream);color:var(--charcoal);overflow-x:hidden;}
+a{text-decoration:none;color:inherit;}
+img{max-width:100%;}
+
+/* ── NAV ── */
+nav{position:fixed;top:0;left:0;right:0;z-index:1000;background:rgba(255,255,255,0.97);backdrop-filter:blur(16px);border-bottom:1px solid rgba(0,169,157,0.12);height:68px;display:flex;align-items:center;padding:0 2rem;gap:2rem;}
+.nav-logo{display:flex;align-items:center;gap:0.6rem;}
+.nav-logo-mark{width:38px;height:38px;background:var(--teal);border-radius:10px;display:flex;align-items:center;justify-content:center;color:white;font-weight:700;font-size:0.85rem;letter-spacing:-0.5px;font-family:var(--font-body);}
+.nav-logo-text{font-family:var(--font-display);font-size:1.4rem;font-weight:700;color:var(--navy);}
+.nav-logo-text span{color:var(--teal);}
+.nav-divider{width:1px;height:28px;background:rgba(0,0,0,0.1);}
+.nav-campaign-badge{font-size:0.7rem;font-weight:600;color:var(--teal-dark);letter-spacing:1px;text-transform:uppercase;}
+.nav-links{display:flex;align-items:center;gap:1.5rem;list-style:none;margin-left:auto;}
+.nav-links a{color:var(--gray);font-size:0.82rem;font-weight:500;transition:color 0.2s;}
+.nav-links a:hover{color:var(--teal);}
+.nav-cta{background:var(--pink);color:white!important;padding:0.45rem 1.2rem;border-radius:50px;font-weight:600;font-size:0.8rem!important;transition:background 0.2s;}
+.nav-cta:hover{background:var(--pink-dark)!important;}
+
+/* ── HERO ── */
+.hero{min-height:100vh;padding-top:68px;background:linear-gradient(145deg,#0D1F35 0%,#1A2A3A 60%,#1E1535 100%);position:relative;overflow:hidden;display:grid;grid-template-columns:1fr 1fr;align-items:stretch;}
+.hero::before{content:'';position:absolute;top:-40%;right:-10%;width:700px;height:700px;background:radial-gradient(circle,rgba(233,30,140,0.15) 0%,transparent 65%);pointer-events:none;}
+.hero::after{content:'';position:absolute;bottom:-20%;left:10%;width:400px;height:400px;background:radial-gradient(circle,rgba(0,188,212,0.18) 0%,transparent 70%);pointer-events:none;}
+
+.hero-left{padding:5rem 3rem 4rem 4rem;display:flex;flex-direction:column;justify-content:center;position:relative;z-index:2;}
+.hero-kicker{display:inline-flex;align-items:center;gap:0.5rem;background:rgba(233,30,140,0.15);border:1px solid rgba(233,30,140,0.35);color:#F48FB1;font-size:0.72rem;font-weight:600;letter-spacing:2px;text-transform:uppercase;padding:0.4rem 1rem;border-radius:50px;margin-bottom:1.5rem;width:fit-content;}
+.hero-kicker-dot{width:6px;height:6px;background:var(--pink);border-radius:50%;animation:blink 2s infinite;}
+@keyframes blink{0%,100%{opacity:1;}50%{opacity:0.3;}}
+.hero h1{font-family:var(--font-display);font-size:clamp(2.8rem,5vw,4.4rem);font-weight:300;color:white;line-height:1.08;margin-bottom:1.5rem;}
+.hero h1 strong{font-weight:700;color:var(--teal);}
+.hero h1 em{font-style:italic;color:#FFD280;}
+.hero-sub{color:rgba(255,255,255,0.75);font-size:1rem;line-height:1.75;max-width:480px;margin-bottom:2rem;}
+.hero-sub strong{color:rgba(255,255,255,0.95);}
+.hero-btns{display:flex;gap:0.8rem;flex-wrap:wrap;margin-bottom:2.5rem;}
+.btn-hero-primary{background:var(--pink);color:white;padding:0.9rem 1.8rem;border-radius:50px;font-weight:600;font-size:0.9rem;display:inline-flex;align-items:center;gap:0.5rem;transition:all 0.25s;box-shadow:0 4px 28px rgba(233,30,140,0.5);}
+.btn-hero-primary:hover{background:var(--pink-dark);transform:translateY(-2px);box-shadow:0 8px 36px rgba(233,30,140,0.65);}
+.btn-hero-secondary{border:2px solid rgba(255,255,255,0.35);color:white;padding:0.9rem 1.8rem;border-radius:50px;font-weight:600;font-size:0.9rem;display:inline-flex;align-items:center;gap:0.5rem;transition:all 0.25s;}
+.btn-hero-secondary:hover{background:rgba(247,148,29,0.12);border-color:var(--orange);}
+.btn-hero-sally{border:2px solid rgba(255,255,255,0.5);color:white;padding:0.9rem 1.8rem;border-radius:50px;font-weight:600;font-size:0.9rem;display:inline-flex;align-items:center;gap:0.5rem;transition:all 0.25s;cursor:pointer;background:rgba(255,255,255,0.1);font-family:var(--font-body);}
+.btn-hero-sally:hover{background:rgba(255,255,255,0.2);border-color:white;}
+.btn-hero-method{border:none;background:rgba(0,169,157,0.25);color:var(--teal-light);padding:0.9rem 1.8rem;border-radius:50px;font-weight:600;font-size:0.9rem;display:inline-flex;align-items:center;gap:0.5rem;transition:all 0.25s;}
+.btn-hero-method:hover{background:rgba(0,169,157,0.4);color:white;}
+.btn-hero-wa{background:#25D366;color:white;padding:0.9rem 1.8rem;border-radius:50px;font-weight:600;font-size:0.9rem;display:inline-flex;align-items:center;gap:0.5rem;transition:all 0.25s;box-shadow:0 4px 20px rgba(37,211,102,0.4);}
+.btn-hero-wa:hover{background:#1ebe5d;transform:translateY(-2px);box-shadow:0 8px 28px rgba(37,211,102,0.5);}
+.btn-hero-mpesa{background:#2C4A6E;color:white;padding:0.9rem 1.8rem;border-radius:50px;font-weight:600;font-size:0.9rem;display:inline-flex;align-items:center;gap:0.5rem;transition:all 0.25s;box-shadow:0 4px 20px rgba(44,74,110,0.35);}
+.btn-hero-mpesa:hover{background:#1A2E44;transform:translateY(-2px);box-shadow:0 8px 28px rgba(26,46,68,0.45);}
+.hero-insurance-strip{display:flex;align-items:center;gap:1rem;background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.1);border-radius:12px;padding:1rem 1.4rem;}
+.ins-strip-icon{font-size:1.8rem;}
+.ins-strip-text{color:rgba(255,255,255,0.85);font-size:0.82rem;line-height:1.5;}
+.ins-strip-text strong{color:white;display:block;margin-bottom:2px;}
+
+.hero-right{position:relative;overflow:hidden;}
+.hero-photo-wrap{position:absolute;inset:0;}
+.hero-photo-wrap img{width:100%;height:100%;object-fit:cover;object-position:center top;}
+.hero-photo-overlay{position:absolute;inset:0;background:linear-gradient(to right,var(--navy) 0%,transparent 30%),linear-gradient(to top,rgba(26,46,68,0.8) 0%,transparent 50%);}
+.hero-testimonial{position:absolute;bottom:2.5rem;left:2rem;right:2rem;background:rgba(255,255,255,0.1);backdrop-filter:blur(16px);border:1px solid rgba(255,255,255,0.2);border-radius:20px;padding:1.5rem;}
+.testi-quote-mark{font-family:var(--font-display);font-size:2.5rem;color:var(--teal);line-height:0.8;margin-bottom:0.5rem;}
+.testi-text{font-family:var(--font-display);font-style:italic;color:white;font-size:1.15rem;line-height:1.6;margin-bottom:1rem;}
+.testi-person{display:flex;align-items:center;gap:0.8rem;}
+.testi-avatar-sm{width:42px;height:42px;border-radius:50%;overflow:hidden;border:2px solid var(--teal);flex-shrink:0;}
+.testi-avatar-sm img{width:100%;height:100%;object-fit:cover;}
+.testi-name{font-weight:600;color:white;font-size:0.85rem;}
+.testi-tag{font-size:0.72rem;color:var(--teal-light);margin-top:2px;}
+.testi-badge{background:var(--teal);color:white;font-size:0.65rem;font-weight:700;padding:3px 8px;border-radius:50px;letter-spacing:1px;text-transform:uppercase;margin-left:auto;white-space:nowrap;}
+
+/* ── TRUST BAR ── */
+.trust-bar{background:var(--navy);padding:0.9rem 2rem;display:flex;align-items:center;justify-content:center;gap:2.5rem;flex-wrap:wrap;}
+.trust-item{display:flex;align-items:center;gap:0.5rem;color:rgba(255,255,255,0.9);font-size:0.8rem;font-weight:500;}
+.trust-item svg{flex-shrink:0;}
+
+/* ── INSURANCE FEATURE SECTION ── */
+.ins-feature{background:white;padding:5rem 2rem;}
+.section-max{max-width:1200px;margin:0 auto;}
+.ins-grid{display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:center;}
+.ins-photo{border-radius:24px;overflow:hidden;position:relative;aspect-ratio:4/3;}
+.ins-photo img{width:100%;height:100%;object-fit:cover;}
+.ins-photo-badge{position:absolute;bottom:1.5rem;left:1.5rem;background:var(--pink);color:white;border-radius:14px;padding:0.8rem 1.2rem;font-size:0.82rem;font-weight:600;box-shadow:0 8px 24px rgba(0,0,0,0.2);}
+.section-eyebrow{display:inline-block;background:var(--orange-light);color:var(--orange-dark);font-size:0.72rem;font-weight:700;letter-spacing:2px;text-transform:uppercase;padding:0.4rem 1rem;border-radius:50px;margin-bottom:1rem;}
+.section-h2{font-family:var(--font-display);font-size:clamp(2rem,3.5vw,2.8rem);font-weight:400;line-height:1.15;color:var(--navy);margin-bottom:1rem;}
+.section-h2 em{font-style:italic;color:var(--teal);}
+.section-p{color:var(--gray);font-size:0.95rem;line-height:1.8;margin-bottom:2rem;}
+.ins-steps{display:flex;flex-direction:column;gap:1rem;margin-bottom:2rem;}
+.ins-step{display:flex;align-items:flex-start;gap:1rem;padding:1rem;background:var(--orange-pale);border-radius:14px;border-left:3px solid var(--orange);}
+.ins-step-num{width:32px;height:32px;background:var(--orange);color:white;border-radius:50%;display:flex;align-items:center;justify-content:center;font-weight:700;font-size:0.85rem;flex-shrink:0;}
+.ins-step-text strong{display:block;font-size:0.88rem;font-weight:600;color:var(--navy);margin-bottom:2px;}
+.ins-step-text span{font-size:0.8rem;color:var(--gray);}
+.btn-teal{display:inline-flex;align-items:center;gap:0.5rem;background:var(--teal);color:white;padding:0.85rem 1.8rem;border-radius:50px;font-weight:600;font-size:0.9rem;transition:all 0.25s;box-shadow:0 4px 20px rgba(0,169,157,0.3);}
+.btn-teal:hover{background:var(--teal-dark);transform:translateY(-2px);}
+.btn-orange{display:inline-flex;align-items:center;gap:0.5rem;background:var(--orange);color:white;padding:0.85rem 1.8rem;border-radius:50px;font-weight:600;font-size:0.9rem;transition:all 0.25s;box-shadow:0 4px 20px rgba(247,148,29,0.3);}
+.btn-orange:hover{background:var(--orange-dark);transform:translateY(-2px);}
+.btn-row{display:flex;gap:0.8rem;flex-wrap:wrap;}
+
+/* ── SALLY SECTION ── */
+.sally-section{background:var(--navy);padding:5rem 2rem;position:relative;overflow:hidden;}
+.sally-section::before{content:'';position:absolute;top:-50%;right:-5%;width:600px;height:600px;background:radial-gradient(circle,rgba(0,169,157,0.12) 0%,transparent 70%);pointer-events:none;}
+.sally-layout{display:grid;grid-template-columns:1fr 1.1fr;gap:4rem;align-items:start;position:relative;z-index:1;}
+.sally-left{}
+.sally-portrait-wrap{position:relative;width:140px;height:140px;margin-bottom:1.5rem;}
+.sally-portrait{width:140px;height:140px;border-radius:50%;object-fit:cover;border:4px solid var(--teal);box-shadow:0 0 0 8px rgba(0,169,157,0.2),0 12px 40px rgba(0,0,0,0.3);position:relative;z-index:1;}
+.sally-portrait-ring{position:absolute;inset:-10px;border-radius:50%;border:2px dashed rgba(0,169,157,0.4);animation:spin-slow 20s linear infinite;}
+@keyframes spin-slow{to{transform:rotate(360deg);}}
+.sally-portrait-badge{position:absolute;bottom:-8px;right:-20px;background:var(--pink);color:white;font-size:0.68rem;font-weight:700;padding:4px 10px;border-radius:50px;white-space:nowrap;box-shadow:0 4px 12px rgba(233,30,140,0.4);z-index:2;}
+.sally-eyebrow{display:inline-flex;align-items:center;gap:0.5rem;background:rgba(233,30,140,0.15);border:1px solid rgba(233,30,140,0.3);color:#F48FB1;font-size:0.72rem;font-weight:600;letter-spacing:2px;text-transform:uppercase;padding:0.4rem 1rem;border-radius:50px;margin-bottom:1.2rem;}
+.sally-h2{font-family:var(--font-display);font-size:clamp(2rem,3.5vw,2.8rem);font-weight:300;color:white;line-height:1.15;margin-bottom:1rem;}
+.sally-h2 em{font-style:italic;color:#F48FB1;}
+.sally-desc{color:rgba(255,255,255,0.7);font-size:0.95rem;line-height:1.8;margin-bottom:2rem;}
+.sally-features{display:flex;flex-direction:column;gap:0.8rem;margin-bottom:2rem;}
+.sally-feat{display:flex;align-items:flex-start;gap:0.8rem;}
+.feat-icon{width:36px;height:36px;background:rgba(0,169,157,0.15);border:1px solid rgba(0,169,157,0.3);border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:1rem;flex-shrink:0;}
+.feat-text strong{display:block;color:white;font-size:0.85rem;font-weight:600;margin-bottom:2px;}
+.feat-text span{color:rgba(255,255,255,0.6);font-size:0.78rem;}
+.voice-btn-wrap{margin-top:0.5rem;}
+.voice-trigger-btn{display:flex;align-items:center;gap:1rem;background:rgba(0,169,157,0.12);border:1px solid rgba(0,169,157,0.3);border-radius:14px;padding:1rem 1.4rem;cursor:pointer;transition:all 0.25s;width:100%;color:white;font-family:var(--font-body);}
+.voice-trigger-btn:hover{background:rgba(0,169,157,0.2);border-color:var(--teal);}
+.mic-ring{width:48px;height:48px;background:var(--teal);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:1.3rem;flex-shrink:0;box-shadow:0 0 0 6px rgba(0,169,157,0.2);}
+.voice-btn-text strong{display:block;font-size:0.9rem;font-weight:600;}
+.voice-btn-text span{font-size:0.75rem;opacity:0.7;}
+
+/* CHAT WIDGET */
+.chat-widget{background:white;border-radius:24px;overflow:hidden;box-shadow:0 20px 60px rgba(0,0,0,0.3);}
+.chat-header{background:linear-gradient(135deg,var(--teal-deeper),var(--teal));padding:1.2rem 1.5rem;display:flex;align-items:center;gap:1rem;}
+.nurse-avatar{width:72px;height:72px;border-radius:50%;overflow:hidden;border:3px solid rgba(255,255,255,0.5);flex-shrink:0;box-shadow:0 0 0 5px rgba(0,169,157,0.3);}
+.nurse-avatar img{width:100%;height:100%;object-fit:cover;}
+.nurse-info h4{font-family:var(--font-display);font-size:1.1rem;font-weight:600;color:white;}
+.nurse-info .nurse-title{font-size:0.72rem;color:rgba(255,255,255,0.8);margin-top:1px;}
+.online-badge{display:inline-flex;align-items:center;gap:4px;font-size:0.62rem;color:rgba(255,255,255,0.8);margin-top:3px;}
+.online-dot{width:6px;height:6px;background:#34D399;border-radius:50%;}
+.nurse-hero-banner{background:linear-gradient(135deg,var(--teal-deeper),var(--teal));padding:1.8rem 1.5rem 1.4rem;display:flex;align-items:center;gap:1.4rem;}
+.nurse-avatar-xl{width:100px;height:100px;border-radius:50%;overflow:hidden;border:4px solid rgba(255,255,255,0.5);flex-shrink:0;box-shadow:0 0 0 6px rgba(255,255,255,0.15),0 8px 30px rgba(0,0,0,0.25);}
+.nurse-avatar-xl img{width:100%;height:100%;object-fit:cover;}
+.nurse-hero-text{}
+.nurse-hero-name{font-family:var(--font-display);font-size:1.5rem;font-weight:700;color:white;letter-spacing:-0.3px;}
+.nurse-hero-title{font-size:0.78rem;color:rgba(255,255,255,0.82);margin-top:2px;}
+.nurse-hero-badge{display:inline-flex;align-items:center;gap:5px;background:rgba(255,255,255,0.15);border:1px solid rgba(255,255,255,0.25);border-radius:50px;padding:3px 10px;font-size:0.65rem;color:rgba(255,255,255,0.9);margin-top:6px;}
+.chat-close-btn{margin-left:auto;background:none;border:none;color:rgba(255,255,255,0.7);font-size:1.4rem;cursor:pointer;line-height:1;}
+.chat-msgs{height:290px;overflow-y:auto;padding:1.2rem;display:flex;flex-direction:column;gap:0.8rem;background:#F8FFFE;}
+.msg-wrap{max-width:85%;}
+.msg-wrap.bot{align-self:flex-start;}
+.msg-wrap.user{align-self:flex-end;}
+.msg-label{font-size:0.62rem;font-weight:700;color:var(--teal-dark);margin-bottom:3px;}
+.msg-bubble{padding:0.75rem 1rem;border-radius:16px;font-size:0.83rem;line-height:1.55;word-break:break-word;}
+.msg-wrap.bot .msg-bubble{background:white;border:1px solid #D4EEEc;border-bottom-left-radius:4px;color:var(--charcoal);box-shadow:0 2px 8px rgba(0,0,0,0.06);}
+.msg-wrap.user .msg-bubble{background:var(--teal);color:white;border-bottom-right-radius:4px;}
+.quick-replies{padding:0.8rem 1rem;display:flex;flex-wrap:wrap;gap:0.4rem;border-top:1px solid #E8F8F7;background:white;}
+.qr-btn{background:var(--teal-pale);color:var(--teal-dark);border:1px solid var(--teal-light);border-radius:50px;padding:0.3rem 0.75rem;font-size:0.72rem;font-family:var(--font-body);font-weight:500;cursor:pointer;transition:all 0.2s;}
+.qr-btn:hover{background:var(--teal);color:white;border-color:var(--teal);}
+.chat-input-area{padding:0.8rem 1rem;border-top:1px solid #E8F8F7;display:flex;gap:0.5rem;background:white;}
+.chat-input{flex:1;border:2px solid #D4EEEC;border-radius:50px;padding:0.5rem 1rem;font-family:var(--font-body);font-size:0.82rem;outline:none;transition:border-color 0.2s;color:var(--charcoal);}
+.chat-input:focus{border-color:var(--teal);}
+.chat-send-btn{background:var(--teal);color:white;border:none;width:38px;height:38px;border-radius:50%;cursor:pointer;font-size:1rem;display:flex;align-items:center;justify-content:center;flex-shrink:0;transition:background 0.2s;}
+.chat-send-btn:hover{background:var(--teal-dark);}
+
+/* ── PRODUCTS ── */
+.products-section{background:var(--cream);padding:5rem 2rem;}
+.products-header{display:flex;align-items:flex-end;justify-content:space-between;margin-bottom:2.5rem;gap:1rem;flex-wrap:wrap;}
+.products-header-text{}
+.products-tabs{display:flex;gap:0.4rem;flex-wrap:wrap;margin-top:1.5rem;}
+.tab-btn{padding:0.5rem 1.2rem;border-radius:50px;border:2px solid #D4EEEC;background:white;color:var(--gray);font-family:var(--font-body);font-size:0.78rem;font-weight:500;cursor:pointer;transition:all 0.2s;}
+.tab-btn.active,.tab-btn:hover{background:var(--pink);color:white;border-color:var(--pink);}
+.products-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(310px,1fr));gap:1.5rem;}
+.product-card{background:white;border-radius:20px;border:1px solid rgba(0,169,157,0.12);transition:all 0.3s;display:none;overflow:hidden;}
+.product-card.visible{display:flex;flex-direction:column;}
+.product-card:hover{transform:translateY(-4px);box-shadow:0 16px 48px rgba(0,169,157,0.15);}
+.pc-head{background:linear-gradient(135deg,var(--teal-pale),#E0F5F3);padding:1.4rem;display:flex;align-items:flex-start;justify-content:space-between;}
+.pc-icon{font-size:2.2rem;}
+.pc-badge{background:var(--pink);color:white;font-size:0.6rem;font-weight:700;padding:3px 8px;border-radius:50px;text-transform:uppercase;letter-spacing:1px;}
+.pc-body{padding:1.4rem;flex:1;display:flex;flex-direction:column;}
+.pc-name{font-family:var(--font-display);font-size:1.2rem;font-weight:600;color:var(--navy);margin-bottom:0.3rem;}
+.pc-tagline{color:var(--gray);font-size:0.78rem;margin-bottom:1rem;}
+.eff-bar{margin-bottom:1rem;}
+.eff-row{display:flex;justify-content:space-between;font-size:0.7rem;margin-bottom:3px;color:var(--gray);}
+.eff-row span:last-child{font-weight:600;color:var(--teal-dark);}
+.eff-track{height:5px;background:#E0F5F3;border-radius:3px;overflow:hidden;}
+.eff-fill{height:100%;background:linear-gradient(90deg,var(--teal-light),var(--teal));border-radius:3px;}
+.pc-stats{display:grid;grid-template-columns:1fr 1fr;gap:0.6rem;margin-bottom:1rem;}
+.stat-box{background:var(--teal-pale);border-radius:8px;padding:0.55rem 0.7rem;}
+.stat-lbl{font-size:0.6rem;color:var(--teal-dark);text-transform:uppercase;letter-spacing:1px;font-weight:600;margin-bottom:1px;}
+.stat-val{font-size:0.8rem;font-weight:600;color:var(--navy);}
+.pc-effects{margin-bottom:1rem;}
+.eff-lbl{font-size:0.68rem;font-weight:600;color:var(--gray);text-transform:uppercase;letter-spacing:1px;margin-bottom:0.4rem;}
+.eff-tags{display:flex;flex-wrap:wrap;gap:0.35rem;}
+.eff-tag{background:#FEF3E8;color:#B35C00;font-size:0.67rem;padding:2px 7px;border-radius:50px;}
+.pc-price{font-family:var(--font-display);font-size:1.3rem;font-weight:600;color:var(--teal-dark);margin-bottom:1rem;}
+.pc-price small{font-size:0.8rem;color:var(--gray);font-weight:400;font-family:var(--font-body);}
+.pc-ins-note{background:var(--orange-light);border-radius:8px;padding:0.5rem 0.7rem;font-size:0.72rem;color:#8B4500;margin-bottom:1rem;display:flex;align-items:center;gap:0.4rem;}
+.pc-btns{display:flex;gap:0.5rem;margin-top:auto;}
+.btn-buy{flex:1;display:block;background:var(--pink);color:white;text-align:center;padding:0.7rem;border-radius:10px;font-weight:600;font-size:0.82rem;transition:all 0.2s;}
+.btn-buy:hover{background:var(--pink-dark);}
+.btn-consult{flex:1;display:block;background:white;color:var(--teal-dark);border:2px solid var(--teal);text-align:center;padding:0.65rem;border-radius:10px;font-weight:600;font-size:0.82rem;transition:all 0.2s;}
+.btn-consult:hover{background:var(--teal-pale);}
+
+/* ── COMPARE TABLE ── */
+.compare-section{background:white;padding:5rem 2rem;}
+.compare-wrap{overflow-x:auto;margin-top:2rem;}
+.compare-table{width:100%;border-collapse:collapse;min-width:780px;}
+.compare-table th{background:var(--orange);color:white;padding:0.9rem 0.8rem;font-family:var(--font-display);font-size:0.95rem;font-weight:400;text-align:left;white-space:nowrap;}
+.compare-table th:first-child{border-radius:12px 0 0 0;}
+.compare-table th:last-child{border-radius:0 12px 0 0;}
+.compare-table td{padding:0.8rem;border-bottom:1px solid #EEF3F5;font-size:0.82rem;vertical-align:middle;}
+.compare-table tr:nth-child(even) td{background:var(--teal-pale);}
+.compare-table tr:hover td{background:#D4EEEc;}
+.badge-g{background:#D1FAE5;color:#065F46;font-size:0.67rem;padding:2px 7px;border-radius:50px;font-weight:600;}
+.badge-y{background:#FEF3C7;color:#92400E;font-size:0.67rem;padding:2px 7px;border-radius:50px;font-weight:600;}
+.badge-r{background:#FFE4E6;color:#9F1239;font-size:0.67rem;padding:2px 7px;border-radius:50px;font-weight:600;}
+
+/* ── CALENDAR ── */
+.calendar-section{background:linear-gradient(160deg,var(--teal-pale) 0%,#F0FFF8 100%);padding:5rem 2rem;}
+.cal-grid{display:grid;grid-template-columns:1fr 1fr;gap:3rem;align-items:start;margin-top:2rem;}
+.calendar-widget{background:white;border-radius:24px;padding:1.5rem;box-shadow:var(--shadow);}
+.cal-head{display:flex;align-items:center;justify-content:space-between;margin-bottom:1.5rem;}
+.cal-nav-btn{background:var(--teal-pale);border:none;cursor:pointer;width:34px;height:34px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:1.1rem;color:var(--teal-dark);transition:all 0.2s;}
+.cal-nav-btn:hover{background:var(--teal);color:white;}
+.cal-month-lbl{font-family:var(--font-display);font-size:1.2rem;font-weight:600;color:var(--navy);}
+.cal-days-grid{display:grid;grid-template-columns:repeat(7,1fr);gap:3px;margin-bottom:0.8rem;}
+.cal-dn{text-align:center;font-size:0.62rem;font-weight:600;color:var(--gray);text-transform:uppercase;padding:0.3rem 0;}
+.cal-day{aspect-ratio:1;display:flex;align-items:center;justify-content:center;border-radius:50%;font-size:0.78rem;cursor:pointer;transition:all 0.15s;}
+.cal-day:hover{background:var(--teal-pale);}
+.cal-day.period{background:#FFE4E6;color:#9F1239;font-weight:600;}
+.cal-day.ovulation{background:#D1FAE5;color:#065F46;font-weight:600;}
+.cal-day.fertile{background:#FEF3C7;color:#92400E;}
+.cal-day.today{border:2px solid var(--teal);font-weight:700;}
+.cal-day.selected{background:var(--teal)!important;color:white!important;}
+.cal-day.empty{cursor:default;}
+.cal-legend{display:flex;flex-wrap:wrap;gap:0.7rem;padding-top:0.8rem;border-top:1px solid var(--teal-pale);}
+.legend-item{display:flex;align-items:center;gap:0.3rem;font-size:0.68rem;color:var(--gray);}
+.legend-dot{width:9px;height:9px;border-radius:50%;}
+.cal-calc{background:white;border-radius:24px;padding:2rem;box-shadow:var(--shadow);}
+.cal-calc h3{font-family:var(--font-display);font-size:1.4rem;color:var(--navy);margin-bottom:1.5rem;}
+.cal-input-grp{margin-bottom:1rem;}
+.cal-input-grp label{font-size:0.78rem;font-weight:600;color:var(--navy);display:block;margin-bottom:0.4rem;}
+.cal-input-grp input{width:100%;padding:0.6rem 1rem;border:2px solid #D4EEEC;border-radius:10px;font-family:var(--font-body);font-size:0.83rem;color:var(--charcoal);outline:none;transition:border-color 0.2s;}
+.cal-input-grp input:focus{border-color:var(--teal);}
+.btn-cal{background:var(--teal);color:white;border:none;border-radius:10px;padding:0.8rem 1.5rem;font-family:var(--font-body);font-size:0.88rem;font-weight:600;cursor:pointer;width:100%;margin-top:0.3rem;transition:background 0.2s;}
+.btn-cal:hover{background:var(--teal-dark);}
+.cal-result{background:var(--teal-pale);border-radius:12px;padding:1.1rem;font-size:0.8rem;line-height:1.7;margin-top:1rem;display:none;}
+.cal-result strong{color:var(--teal-dark);}
+
+/* ── TESTIMONIALS ── */
+.testi-section{background:var(--navy);padding:5rem 2rem;}
+.testi-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:1.5rem;margin-top:2rem;}
+.testi-card{background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.1);border-radius:20px;padding:1.8rem;}
+.testi-card-quote{font-size:2.5rem;color:var(--teal);font-family:var(--font-display);line-height:0.9;margin-bottom:0.5rem;}
+.testi-card-text{font-style:italic;color:rgba(255,255,255,0.85);line-height:1.7;font-size:0.9rem;margin-bottom:1.2rem;}
+.testi-card-person{display:flex;align-items:center;gap:0.8rem;}
+.testi-card-avatar{width:44px;height:44px;border-radius:50%;background:var(--teal);display:flex;align-items:center;justify-content:center;font-size:1.2rem;flex-shrink:0;}
+.testi-card-name{font-weight:600;color:white;font-size:0.85rem;}
+.testi-card-loc{font-size:0.72rem;color:var(--teal-light);}
+.star-row{color:#F7941D;font-size:0.75rem;margin-bottom:0.2rem;}
+
+/* ── FAQ ── */
+.faq-section{background:var(--cream);padding:5rem 2rem;}
+.faq-grid{display:grid;grid-template-columns:1fr 1fr;gap:0.8rem;margin-top:2rem;}
+.faq-item{border:1px solid #D4EEEC;border-radius:14px;overflow:hidden;transition:border-color 0.2s;}
+.faq-item:hover{border-color:var(--teal);}
+.faq-q{padding:1.1rem 1.4rem;display:flex;justify-content:space-between;align-items:center;cursor:pointer;font-weight:500;font-size:0.87rem;color:var(--navy);background:white;user-select:none;}
+.faq-icon{color:var(--teal);font-size:1.2rem;transition:transform 0.3s;flex-shrink:0;margin-left:0.5rem;}
+.faq-a{padding:0 1.4rem;max-height:0;overflow:hidden;transition:max-height 0.4s ease,padding 0.3s;font-size:0.82rem;color:var(--gray);line-height:1.7;background:var(--teal-pale);}
+.faq-item.open .faq-a{max-height:300px;padding:1rem 1.4rem;}
+.faq-item.open .faq-icon{transform:rotate(45deg);}
+
+/* ── COMMUNITY ── */
+.community-section{background:linear-gradient(135deg,#004D5C,#006064,#00838F);padding:5rem 2rem;}
+.comm-grid{display:grid;grid-template-columns:1fr 1fr;gap:2rem;margin-top:3rem;}
+.comm-card{background:rgba(255,255,255,0.1);backdrop-filter:blur(10px);border:1px solid rgba(255,255,255,0.2);border-radius:24px;padding:2.5rem;color:white;text-align:center;}
+.comm-icon{font-size:2.8rem;margin-bottom:1rem;display:block;}
+.comm-card h3{font-family:var(--font-display);font-size:1.7rem;font-weight:400;margin-bottom:0.8rem;}
+.comm-card p{font-size:0.86rem;opacity:0.85;line-height:1.7;margin-bottom:1.5rem;}
+.btn-comm{display:inline-block;background:white;color:var(--teal-deeper);padding:0.8rem 2rem;border-radius:50px;font-weight:700;font-size:0.86rem;transition:all 0.2s;}
+.btn-comm:hover{transform:translateY(-2px);box-shadow:0 8px 25px rgba(0,0,0,0.2);}
+.btn-comm.wa{background:#25D366;color:white;}
+
+/* ── FOOTER ── */
+footer{background:var(--charcoal);color:rgba(255,255,255,0.65);padding:3rem 2rem 1.5rem;}
+.footer-inner{max-width:1200px;margin:0 auto;}
+.footer-grid{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:3rem;margin-bottom:2rem;}
+.footer-brand-name{font-family:var(--font-display);font-size:1.8rem;font-weight:700;color:white;margin-bottom:0.5rem;display:flex;align-items:center;gap:0.5rem;}
+.footer-brand-name .teal{color:var(--teal);}
+.footer-brand-desc{font-size:0.8rem;line-height:1.7;margin-bottom:1rem;}
+.footer-badge{display:inline-flex;align-items:center;gap:0.5rem;background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.1);border-radius:8px;padding:0.4rem 0.9rem;font-size:0.7rem;}
+.footer-col h5{color:white;font-size:0.82rem;font-weight:600;margin-bottom:1rem;text-transform:uppercase;letter-spacing:1px;}
+.footer-col ul{list-style:none;}
+.footer-col li{margin-bottom:0.5rem;}
+.footer-col a{color:rgba(255,255,255,0.55);font-size:0.8rem;transition:color 0.2s;}
+.footer-col a:hover{color:var(--teal);}
+.footer-bottom{border-top:1px solid rgba(255,255,255,0.08);padding-top:1.5rem;display:flex;justify-content:space-between;align-items:center;font-size:0.72rem;flex-wrap:wrap;gap:0.5rem;}
+.footer-bottom a{color:var(--teal);text-decoration:none;}
+.footer-disc{padding-top:1rem;font-size:0.67rem;color:rgba(255,255,255,0.35);line-height:1.6;font-style:italic;}
+
+/* ── FLOATING CHAT FAB ── */
+.chat-fab{position:fixed;bottom:1.8rem;right:1.8rem;z-index:900;display:flex;flex-direction:column;align-items:flex-end;gap:0.7rem;}
+.fab-label{background:white;color:var(--teal-dark);font-size:0.72rem;font-weight:700;padding:4px 10px;border-radius:50px;box-shadow:0 2px 12px rgba(0,0,0,0.15);}
+.fab-btn{background:var(--pink);color:white;border:none;width:72px;height:72px;border-radius:50%;font-size:1.8rem;cursor:pointer;box-shadow:0 6px 24px rgba(233,30,140,0.5);transition:all 0.3s;display:flex;align-items:center;justify-content:center;animation:fab-pulse 2.5s infinite;}
+@keyframes fab-pulse{0%,100%{box-shadow:0 6px 24px rgba(233,30,140,0.5);}50%{box-shadow:0 6px 40px rgba(233,30,140,0.85);}}
+.fab-btn:hover{transform:scale(1.08);background:var(--pink-dark);}
+.fab-chat-window{position:fixed;bottom:5.5rem;right:1.8rem;width:360px;max-height:560px;background:white;border-radius:24px;box-shadow:0 20px 80px rgba(0,0,0,0.22);display:none;flex-direction:column;z-index:901;overflow:hidden;border:1px solid rgba(0,169,157,0.15);}
+.fab-chat-window.open{display:flex;}
+.fab-chat-head{background:linear-gradient(135deg,var(--teal-deeper),var(--teal));padding:1.2rem 1.5rem;display:flex;align-items:center;gap:1rem;color:white;}
+.fab-nurse-av{width:52px;height:52px;border-radius:50%;overflow:hidden;border:3px solid rgba(255,255,255,0.5);flex-shrink:0;box-shadow:0 0 0 4px rgba(0,169,157,0.25);}
+.fab-nurse-av img{width:100%;height:100%;object-fit:cover;}
+.fab-nurse-info h4{font-family:var(--font-display);font-size:1.05rem;font-weight:600;}
+.fab-nurse-info .sub{font-size:0.68rem;opacity:0.8;margin-top:1px;}
+.fab-close{margin-left:auto;background:none;border:none;color:white;font-size:1.3rem;cursor:pointer;opacity:0.7;}
+.fab-close:hover{opacity:1;}
+.fab-msgs{flex:1;overflow-y:auto;padding:1.2rem;display:flex;flex-direction:column;gap:0.8rem;background:#F8FFFE;}
+.fab-quick{padding:0.7rem 1rem;display:flex;flex-wrap:wrap;gap:0.4rem;border-top:1px solid #E8F8F7;background:white;}
+.fab-input-row{padding:0.7rem 1rem;border-top:1px solid #E8F8F7;display:flex;gap:0.5rem;background:white;}
+
+/* ── RESPONSIVE ── */
+@media(max-width:1000px){.hero{grid-template-columns:1fr;}.hero-right{display:none;}.ins-grid{grid-template-columns:1fr;}.sally-layout{grid-template-columns:1fr;}.cal-grid{grid-template-columns:1fr;}.comm-grid{grid-template-columns:1fr 1fr!important;}.footer-grid{grid-template-columns:1fr 1fr;}}
+@media(max-width:700px){.faq-grid{grid-template-columns:1fr;}.footer-grid{grid-template-columns:1fr;}.fab-chat-window{width:calc(100vw - 2rem);right:1rem;}.nav-links{display:none;}.hero-left{padding:3rem 1.5rem 3rem;}.products-header{flex-direction:column;align-items:flex-start;}.comm-grid{grid-template-columns:1fr!important;}}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <div class="nav-logo">
+    <a href="https://mydawa.com" target="_blank" style="display:flex;align-items:center;">
+      <img src="https://cdn.mydawa.store/application-files/template/assets/images/logo.avif"
+           alt="MYDAWA" style="height:38px;width:auto;object-fit:contain;"
+           onerror="this.onerror=null;this.style.display='none';this.nextElementSibling.style.display='flex';">
+      <div style="display:none;align-items:center;gap:0.5rem;">
+        <div class="nav-logo-mark">MY</div>
+        <div class="nav-logo-text">MY<span>DAWA</span></div>
+      </div>
+    </a>
+  </div>
+  <div class="nav-divider"></div>
+  <div class="nav-campaign-badge">&#128337; Insurance &amp; FP Campaign</div>
+  <ul class="nav-links">
+    <li><a href="#insurance">Insurance</a></li>
+    <li><a href="#products">Products</a></li>
+    <li><a href="#ask-sally">Ask Sally</a></li>
+    <li><a href="#compare">Compare</a></li>
+    <li><a href="#faq">FAQs</a></li>
+    <li><a href="https://mydawa.com/products/search/family%20planning" target="_blank" class="nav-cta">Shop Family Planning</a></li>
+  </ul>
+</nav>
+
+<!-- HERO -->
+<section class="hero" id="home">
+  <div class="hero-left">
+    
+    <h1>Does your medical<br>insurance cover include<br><strong>family planning?</strong><br><em>Check today.</em></h1>
+    <p class="hero-sub">Thousands of women are paying out of pocket for contraceptives that their <strong>insurance already covers</strong> — IUDs, implants, consultations, and more. Find out what your plan includes and shop confidently today.</p>
+    <div class="hero-btns">
+      <a href="https://mydawa.com/products/search/family%20planning" target="_blank" class="btn-hero-primary">&#127807; Shop with Insurance</a>
+      <a href="https://mydawa.com/login?ReturnUrl=%2Fmy-health-centre%2Fbook-a-consultation" target="_blank" class="btn-hero-secondary">&#128203; Check My Coverage</a>
+      <button class="btn-hero-sally" onclick="document.getElementById('ask-sally').scrollIntoView({behavior:'smooth'});setTimeout(()=>document.getElementById('mainChatInput').focus(),600);">&#128139; Ask Nurse Sally</button>
+      <a href="#products" class="btn-hero-method">&#128198; Choose a Method</a>
+      <a href="https://wa.me/254700000000?text=Hi!+I%27d+like+help+with+family+planning+%26+insurance+on+MYDAWA" target="_blank" class="btn-hero-wa">&#128172; Chat on WhatsApp</a>
+      <a href="https://mydawa.com/products/search/family%20planning" target="_blank" class="btn-hero-mpesa">&#128178; Pay with M-Pesa</a>
+    </div>
+    <div class="hero-insurance-strip">
+      <div class="ins-strip-icon">&#127973;</div>
+      <div class="ins-strip-text">
+        <strong>NHIF &amp; Private Insurance Accepted</strong>
+        IUD insertion, implants, pills, and clinical consultations may be covered at zero or minimal out-of-pocket cost.
+      </div>
+    </div>
+  </div>
+  <div class="hero-right">
+    <div class="hero-photo-wrap">
+      <img src="https://images.unsplash.com/photo-1531123897727-8f129e1688ce?w=800&h=900&fit=crop&crop=faces,top" alt="African woman confident and healthy">
+      <div class="hero-photo-overlay"></div>
+    </div>
+    <div class="hero-testimonial">
+      <div class="testi-quote-mark">&#8220;</div>
+      <div class="testi-text">I had no idea my insurance covered IUD insertion. I walked into the clinic expecting to pay KES 4,000 and paid nothing. The consultation on MYDAWA made the whole process so easy.</div>
+      <div class="testi-person">
+        <div>
+          <div class="testi-name">Grace Akinyi</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TRUST BAR -->
+<div class="trust-bar">
+  <div class="trust-item">&#9989; NHIF Accepted at Select Clinics</div>
+  <div class="trust-item">&#128274; 100% Private &amp; Confidential</div>
+  <div class="trust-item">&#128140; Medically Reviewed Content</div>
+  <div class="trust-item">&#128666; Discreet Doorstep Delivery</div>
+  <div class="trust-item">&#128172; Chat with Nurse Sally</div>
+</div>
+
+<!-- INSURANCE FEATURE -->
+<section class="ins-feature" id="insurance">
+  <div class="section-max">
+    <div class="ins-grid">
+      <div class="ins-photo">
+        <img src="https://images.unsplash.com/photo-1576091160550-2173dba999ef?w=700&h=520&fit=crop&crop=faces,center" alt="African women healthcare consultation">
+        <div class="ins-photo-badge">&#127973; Insurance Accepted at Select Clinics</div>
+      </div>
+      
+      <div>
+        <div class="section-eyebrow">Insurance Coverage</div>
+        <h2 class="section-h2">Stop paying out of pocket for <em>what your insurance covers</em></h2>
+        <p class="section-p">The National Hospital Insurance Fund (NHIF) and many private health schemes in Kenya cover a range of family planning services. Most women don't know — and end up paying unnecessarily. Here's how to use your cover on MYDAWA.</p>
+        <div class="ins-steps">
+          <div class="ins-step">
+            <div class="ins-step-num">1</div>
+            <div class="ins-step-text">
+              <strong>Check your policy benefits</strong>
+              <span>Log into your NHIF or private insurer portal, or call your insurer directly to confirm family planning coverage.</span>
+            </div>
+          </div>
+          <div class="ins-step">
+            <div class="ins-step-num">2</div>
+            <div class="ins-step-text">
+              <strong>Book a clinical consultation on MYDAWA</strong>
+              <span>Our trained healthcare providers will advise on the right method and confirm your insurance eligibility.</span>
+            </div>
+          </div>
+          <div class="ins-step">
+            <div class="ins-step-num">3</div>
+            <div class="ins-step-text">
+              <strong>Shop or visit a partner clinic</strong>
+              <span>Purchase products on MYDAWA or get procedures done at an insurer-accredited facility at zero or minimal cost.</span>
+            </div>
+          </div>
+        </div>
+        <div class="btn-row">
+          <a href="https://mydawa.com/login?ReturnUrl=%2Fmy-health-centre%2Fbook-a-consultation" target="_blank" class="btn-teal">&#128203; Book a Consultation</a>
+          <a href="https://mydawa.com/products/search/family%20planning" target="_blank" class="btn-orange">&#127807; Shop Now</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- NURSE SALLY -->
+<section class="sally-section" id="ask-sally">
+  <div class="section-max">
+    <div class="sally-layout">
+      <div class="sally-left">
+        <div class="sally-portrait-wrap">
+          <img src="https://images.unsplash.com/photo-1643297654416-05795d62e39c?w=320&h=320&fit=crop&crop=faces,top" alt="Nurse Sally" style="width:100%;height:100%;object-fit:cover;border-radius:50%;">
+          <div class="sally-portrait-ring"></div>
+          <div class="sally-portrait-badge">&#128139; Ask me anything</div>
+        </div>
+        <div class="sally-eyebrow">&#128139; Virtual Nurse</div>
+        <h2 class="sally-h2">Meet <em>Nurse Sally</em> &mdash; your family planning specialist</h2>
+        <p class="sally-desc">Nurse Sally is a warm, experienced reproductive health specialist available 24/7. She can help you understand your options, navigate insurance coverage, and guide you to the right method — completely privately.</p>
+        <div class="sally-features">
+          <div class="sally-feat">
+            <div class="feat-icon">&#129656;</div>
+            <div class="feat-text"><strong>Clinically Grounded</strong><span>Evidence-based guidance on all family planning methods</span></div>
+          </div>
+          <div class="sally-feat">
+            <div class="feat-icon">&#127973;</div>
+            <div class="feat-text"><strong>Insurance Aware</strong><span>Advises on what NHIF &amp; private schemes typically cover</span></div>
+          </div>
+          <div class="sally-feat">
+            <div class="feat-icon">&#128274;</div>
+            <div class="feat-text"><strong>Completely Confidential</strong><span>Your questions and conversation stay private</span></div>
+          </div>
+          <div class="sally-feat">
+            <div class="feat-icon">&#127908;</div>
+            <div class="feat-text"><strong>Voice or Text</strong><span>Ask by typing or speaking — Sally understands Kenyan English</span></div>
+          </div>
+        </div>
+        <div class="voice-btn-wrap">
+          <button class="voice-trigger-btn" onclick="activateVoice()">
+            <div class="mic-ring">&#127908;</div>
+            <div class="voice-btn-text">
+              <strong>Speak to Nurse Sally</strong>
+              <span>Tap to activate voice consultation</span>
+            </div>
+          </button>
+        </div>
+      </div>
+      <div class="chat-widget">
+        <div class="nurse-hero-banner">
+          <div class="nurse-avatar-xl">
+            <img src="https://images.unsplash.com/photo-1643297654416-05795d62e39c?w=200&h=200&fit=crop&crop=faces" alt="Nurse Sally" style="width:100%;height:100%;object-fit:cover;">
+          </div>
+          <div class="nurse-hero-text">
+            <div class="nurse-hero-name">Nurse Sally</div>
+            <div class="nurse-hero-title">Reproductive Health Specialist</div>
+            <div class="nurse-hero-badge"><span class="online-dot"></span>&nbsp;Available now &middot; MYDAWA Health Centre</div>
+          </div>
+        </div>
+        <div class="chat-header" style="display:none;"></div>
+        <div class="chat-msgs" id="mainChatMsgs">
+          <div class="msg-wrap bot"><div class="msg-label">Nurse Sally</div><div class="msg-bubble">Hello and welcome. I'm Nurse Sally, a reproductive health specialist here at MYDAWA. I can help you understand family planning options, check what your insurance covers, guide you to the right method, or book you a consultation with a clinician. What would you like to know today?</div></div>
+        </div>
+        <div class="quick-replies" id="mainQuickReplies">
+          <button class="qr-btn" onclick="sendMainQuick('Does my insurance cover family planning?')">&#127973; Insurance coverage</button>
+          <button class="qr-btn" onclick="sendMainQuick('I need long-term contraception for 5 years')">Long-term options</button>
+          <button class="qr-btn" onclick="sendMainQuick('I am breastfeeding, what is safe for me?')">Breastfeeding safe</button>
+          <button class="qr-btn" onclick="sendMainQuick('Book a consultation with a doctor')">Book consultation</button>
+        </div>
+        <div class="chat-input-area">
+          <input class="chat-input" id="mainChatInput" placeholder="Ask Nurse Sally anything..." onkeydown="if(event.key==='Enter')sendMainMessage()">
+          <button class="chat-send-btn" onclick="sendMainMessage()">&#10148;</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PRODUCTS -->
+<section class="products-section" id="products">
+  <div class="section-max">
+    <div class="products-header">
+      <div class="products-header-text">
+        <div class="section-eyebrow">Full Product Range</div>
+        <h2 class="section-h2">Family planning options, <em>all in one place</em></h2>
+        <p style="color:var(--gray);font-size:0.92rem;margin-top:0.5rem;max-width:560px;">Explore all available methods with honest information on efficacy, side effects, and cost — plus insurance coverage notes where applicable.</p>
+        <div class="products-tabs">
+          <button class="tab-btn active" onclick="filterP('all',this)">All Methods</button>
+          <button class="tab-btn" onclick="filterP('hormonal',this)">Hormonal</button>
+          <button class="tab-btn" onclick="filterP('barrier',this)">Barrier</button>
+          <button class="tab-btn" onclick="filterP('longterm',this)">Long-Acting</button>
+          <button class="tab-btn" onclick="filterP('natural',this)">Natural</button>
+          <button class="tab-btn" onclick="filterP('emergency',this)">Emergency</button>
+          <button class="tab-btn" onclick="filterP('permanent',this)">Permanent</button>
+        </div>
+      </div>
+    </div>
+    <div class="products-grid" id="productsGrid">
+
+      <div class="product-card visible" data-cat="hormonal">
+        <div class="pc-head"><span class="pc-icon">&#128138;</span><span class="pc-badge">Daily</span></div>
+        <div class="pc-body">
+          <div class="pc-name">Combined Oral Pill</div>
+          <div class="pc-tagline">Oralcon, Microgynon, Lo-Femenal</div>
+          <div class="eff-bar"><div class="eff-row"><span>Efficacy</span><span>91&ndash;99%</span></div><div class="eff-track"><div class="eff-fill" style="width:95%"></div></div></div>
+          <div class="pc-stats">
+            <div class="stat-box"><div class="stat-lbl">Duration</div><div class="stat-val">Daily use</div></div>
+            <div class="stat-box"><div class="stat-lbl">Prescription</div><div class="stat-val">Required</div></div>
+            <div class="stat-box"><div class="stat-lbl">STI Protection</div><div class="stat-val">No</div></div>
+            <div class="stat-box"><div class="stat-lbl">Reversible</div><div class="stat-val">Immediate</div></div>
+          </div>
+          <div class="pc-effects"><div class="eff-lbl">Possible Side Effects</div><div class="eff-tags"><span class="eff-tag">Nausea</span><span class="eff-tag">Headaches</span><span class="eff-tag">Mood changes</span></div></div>
+          <div class="pc-ins-note">&#127973; May be covered by private insurance schemes</div>
+          <div class="pc-price">KES 150&ndash;400 <small>/ monthly pack</small></div>
+          <div class="pc-btns">
+            <a href="https://mydawa.com/products/search/family%20planning" target="_blank" class="btn-buy">&#128722; Buy on MYDAWA</a>
+            <a href="https://mydawa.com/login?ReturnUrl=%2Fmy-health-centre%2Fbook-a-consultation" target="_blank" class="btn-consult">&#128203; Consult</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="product-card visible" data-cat="hormonal">
+        <div class="pc-head"><span class="pc-icon">&#128138;</span><span class="pc-badge">Daily</span></div>
+        <div class="pc-body">
+          <div class="pc-name">Progestogen-Only Pill</div>
+          <div class="pc-tagline">Microlut &mdash; safe while breastfeeding</div>
+          <div class="eff-bar"><div class="eff-row"><span>Efficacy</span><span>87&ndash;99%</span></div><div class="eff-track"><div class="eff-fill" style="width:91%"></div></div></div>
+          <div class="pc-stats">
+            <div class="stat-box"><div class="stat-lbl">Duration</div><div class="stat-val">Daily use</div></div>
+            <div class="stat-box"><div class="stat-lbl">Prescription</div><div class="stat-val">Required</div></div>
+            <div class="stat-box"><div class="stat-lbl">STI Protection</div><div class="stat-val">No</div></div>
+            <div class="stat-box"><div class="stat-lbl">Reversible</div><div class="stat-val">Immediate</div></div>
+          </div>
+          <div class="pc-effects"><div class="eff-lbl">Possible Side Effects</div><div class="eff-tags"><span class="eff-tag">Irregular periods</span><span class="eff-tag">Spotting</span></div></div>
+          <div class="pc-ins-note">&#127973; May be covered by private insurance schemes</div>
+          <div class="pc-price">KES 150&ndash;350 <small>/ monthly pack</small></div>
+          <div class="pc-btns">
+            <a href="https://mydawa.com/products/search/family%20planning" target="_blank" class="btn-buy">&#128722; Buy on MYDAWA</a>
+            <a href="https://mydawa.com/login?ReturnUrl=%2Fmy-health-centre%2Fbook-a-consultation" target="_blank" class="btn-consult">&#128203; Consult</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="product-card visible" data-cat="hormonal">
+        <div class="pc-head"><span class="pc-icon">&#128137;</span><span class="pc-badge">3-Month</span></div>
+        <div class="pc-body">
+          <div class="pc-name">Depo-Provera Injection</div>
+          <div class="pc-tagline">DMPA &mdash; every 3 months at a clinic</div>
+          <div class="eff-bar"><div class="eff-row"><span>Efficacy</span><span>94&ndash;99%</span></div><div class="eff-track"><div class="eff-fill" style="width:96%"></div></div></div>
+          <div class="pc-stats">
+            <div class="stat-box"><div class="stat-lbl">Duration</div><div class="stat-val">3 months</div></div>
+            <div class="stat-box"><div class="stat-lbl">Prescription</div><div class="stat-val">Clinic visit</div></div>
+            <div class="stat-box"><div class="stat-lbl">STI Protection</div><div class="stat-val">No</div></div>
+            <div class="stat-box"><div class="stat-lbl">Reversible</div><div class="stat-val">Yes (delayed)</div></div>
+          </div>
+          <div class="pc-effects"><div class="eff-lbl">Possible Side Effects</div><div class="eff-tags"><span class="eff-tag">No periods</span><span class="eff-tag">Weight gain</span><span class="eff-tag">Delayed fertility</span></div></div>
+          <div class="pc-ins-note">&#127973; NHIF covers at accredited clinics</div>
+          <div class="pc-price">KES 300&ndash;700 <small>/ injection</small></div>
+          <div class="pc-btns">
+            <a href="https://mydawa.com/products/search/family%20planning" target="_blank" class="btn-buy">&#128722; Buy on MYDAWA</a>
+            <a href="https://mydawa.com/login?ReturnUrl=%2Fmy-health-centre%2Fbook-a-consultation" target="_blank" class="btn-consult">&#128203; Consult</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="product-card visible" data-cat="hormonal">
+        <div class="pc-head"><span class="pc-icon">&#128137;</span><span class="pc-badge">Self-inject</span></div>
+        <div class="pc-body">
+          <div class="pc-name">Sayana Press</div>
+          <div class="pc-tagline">DMPA-SC &mdash; self-injectable at home</div>
+          <div class="eff-bar"><div class="eff-row"><span>Efficacy</span><span>94&ndash;99%</span></div><div class="eff-track"><div class="eff-fill" style="width:96%"></div></div></div>
+          <div class="pc-stats">
+            <div class="stat-box"><div class="stat-lbl">Duration</div><div class="stat-val">3 months</div></div>
+            <div class="stat-box"><div class="stat-lbl">Prescription</div><div class="stat-val">Required</div></div>
+            <div class="stat-box"><div class="stat-lbl">STI Protection</div><div class="stat-val">No</div></div>
+            <div class="stat-box"><div class="stat-lbl">Reversible</div><div class="stat-val">Yes (delayed)</div></div>
+          </div>
+          <div class="pc-effects"><div class="eff-lbl">Possible Side Effects</div><div class="eff-tags"><span class="eff-tag">Irregular bleeding</span><span class="eff-tag">Injection site reaction</span></div></div>
+          <div class="pc-ins-note">&#127973; Check private scheme benefits</div>
+          <div class="pc-price">KES 500&ndash;900 <small>/ dose</small></div>
+          <div class="pc-btns">
+            <a href="https://mydawa.com/products/search/family%20planning" target="_blank" class="btn-buy">&#128722; Buy on MYDAWA</a>
+            <a href="https://mydawa.com/login?ReturnUrl=%2Fmy-health-centre%2Fbook-a-consultation" target="_blank" class="btn-consult">&#128203; Consult</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="product-card visible" data-cat="longterm">
+        <div class="pc-head"><span class="pc-icon">&#128170;</span><span class="pc-badge">3&ndash;5 Yrs</span></div>
+        <div class="pc-body">
+          <div class="pc-name">Implant (Implanon/Jadelle)</div>
+          <div class="pc-tagline">Small rod inserted in the upper arm</div>
+          <div class="eff-bar"><div class="eff-row"><span>Efficacy</span><span>99.9%</span></div><div class="eff-track"><div class="eff-fill" style="width:99%"></div></div></div>
+          <div class="pc-stats">
+            <div class="stat-box"><div class="stat-lbl">Duration</div><div class="stat-val">3&ndash;5 years</div></div>
+            <div class="stat-box"><div class="stat-lbl">Procedure</div><div class="stat-val">Clinic only</div></div>
+            <div class="stat-box"><div class="stat-lbl">STI Protection</div><div class="stat-val">No</div></div>
+            <div class="stat-box"><div class="stat-lbl">Reversible</div><div class="stat-val">Yes</div></div>
+          </div>
+          <div class="pc-effects"><div class="eff-lbl">Possible Side Effects</div><div class="eff-tags"><span class="eff-tag">Irregular bleeding</span><span class="eff-tag">No periods</span><span class="eff-tag">Arm tenderness</span></div></div>
+          <div class="pc-ins-note">&#9989; Often covered by NHIF &amp; private schemes</div>
+          <div class="pc-price">KES 1,500&ndash;5,000 <small>/ insertion</small></div>
+          <div class="pc-btns">
+            <a href="https://mydawa.com/products/search/family%20planning" target="_blank" class="btn-buy">&#128722; Buy on MYDAWA</a>
+            <a href="https://mydawa.com/login?ReturnUrl=%2Fmy-health-centre%2Fbook-a-consultation" target="_blank" class="btn-consult">&#128203; Consult</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="product-card visible" data-cat="longterm">
+        <div class="pc-head"><span class="pc-icon">&#128299;</span><span class="pc-badge">Up to 10 yrs</span></div>
+        <div class="pc-body">
+          <div class="pc-name">Copper IUD (Cu-T 380A)</div>
+          <div class="pc-tagline">Hormone-free, long-acting &amp; reversible</div>
+          <div class="eff-bar"><div class="eff-row"><span>Efficacy</span><span>99.2&ndash;99.9%</span></div><div class="eff-track"><div class="eff-fill" style="width:99%"></div></div></div>
+          <div class="pc-stats">
+            <div class="stat-box"><div class="stat-lbl">Duration</div><div class="stat-val">Up to 10 yrs</div></div>
+            <div class="stat-box"><div class="stat-lbl">Procedure</div><div class="stat-val">Clinic only</div></div>
+            <div class="stat-box"><div class="stat-lbl">Hormonal</div><div class="stat-val">No &#10003;</div></div>
+            <div class="stat-box"><div class="stat-lbl">Reversible</div><div class="stat-val">Yes</div></div>
+          </div>
+          <div class="pc-effects"><div class="eff-lbl">Possible Side Effects</div><div class="eff-tags"><span class="eff-tag">Heavier periods</span><span class="eff-tag">Cramping</span></div></div>
+          <div class="pc-ins-note">&#9989; NHIF covers IUD insertion at accredited clinics</div>
+          <div class="pc-price">KES 1,000&ndash;4,000 <small>/ insertion</small></div>
+          <div class="pc-btns">
+            <a href="https://mydawa.com/products/search/family%20planning" target="_blank" class="btn-buy">&#128722; Buy on MYDAWA</a>
+            <a href="https://mydawa.com/login?ReturnUrl=%2Fmy-health-centre%2Fbook-a-consultation" target="_blank" class="btn-consult">&#128203; Consult</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="product-card visible" data-cat="longterm">
+        <div class="pc-head"><span class="pc-icon">&#128299;</span><span class="pc-badge">5 Years</span></div>
+        <div class="pc-body">
+          <div class="pc-name">Hormonal IUD (Mirena)</div>
+          <div class="pc-tagline">Low-dose local hormone, often stops periods</div>
+          <div class="eff-bar"><div class="eff-row"><span>Efficacy</span><span>&gt;99%</span></div><div class="eff-track"><div class="eff-fill" style="width:99%"></div></div></div>
+          <div class="pc-stats">
+            <div class="stat-box"><div class="stat-lbl">Duration</div><div class="stat-val">5 years</div></div>
+            <div class="stat-box"><div class="stat-lbl">Procedure</div><div class="stat-val">Clinic only</div></div>
+            <div class="stat-box"><div class="stat-lbl">Hormonal</div><div class="stat-val">Low (local)</div></div>
+            <div class="stat-box"><div class="stat-lbl">Reversible</div><div class="stat-val">Yes</div></div>
+          </div>
+          <div class="pc-effects"><div class="eff-lbl">Possible Side Effects</div><div class="eff-tags"><span class="eff-tag">Lighter periods</span><span class="eff-tag">Spotting first 3mo</span></div></div>
+          <div class="pc-ins-note">&#127973; Check private scheme for Mirena cover</div>
+          <div class="pc-price">KES 3,000&ndash;8,000 <small>/ insertion</small></div>
+          <div class="pc-btns">
+            <a href="https://mydawa.com/products/search/family%20planning" target="_blank" class="btn-buy">&#128722; Buy on MYDAWA</a>
+            <a href="https://mydawa.com/login?ReturnUrl=%2Fmy-health-centre%2Fbook-a-consultation" target="_blank" class="btn-consult">&#128203; Consult</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="product-card visible" data-cat="barrier">
+        <div class="pc-head"><span class="pc-icon">&#128737;</span><span class="pc-badge">Per Use</span></div>
+        <div class="pc-body">
+          <div class="pc-name">Male Condoms</div>
+          <div class="pc-tagline">Only method protecting against STIs &amp; pregnancy</div>
+          <div class="eff-bar"><div class="eff-row"><span>Efficacy</span><span>82&ndash;98%</span></div><div class="eff-track"><div class="eff-fill" style="width:87%"></div></div></div>
+          <div class="pc-stats">
+            <div class="stat-box"><div class="stat-lbl">Duration</div><div class="stat-val">Per use</div></div>
+            <div class="stat-box"><div class="stat-lbl">Prescription</div><div class="stat-val">Not needed</div></div>
+            <div class="stat-box"><div class="stat-lbl">STI Protection</div><div class="stat-val">&#10003; Yes</div></div>
+            <div class="stat-box"><div class="stat-lbl">Reversible</div><div class="stat-val">Immediate</div></div>
+          </div>
+          <div class="pc-effects"><div class="eff-lbl">Considerations</div><div class="eff-tags"><span class="eff-tag">Requires partner use</span></div></div>
+          <div class="pc-ins-note">&#127973; No prescription needed &mdash; available OTC</div>
+          <div class="pc-price">KES 50&ndash;200 <small>/ pack</small></div>
+          <div class="pc-btns">
+            <a href="https://mydawa.com/products/search/family%20planning" target="_blank" class="btn-buy">&#128722; Buy on MYDAWA</a>
+            <a href="https://mydawa.com/login?ReturnUrl=%2Fmy-health-centre%2Fbook-a-consultation" target="_blank" class="btn-consult">&#128203; Consult</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="product-card visible" data-cat="barrier">
+        <div class="pc-head"><span class="pc-icon">&#128737;</span><span class="pc-badge">Per Use</span></div>
+        <div class="pc-body">
+          <div class="pc-name">Female Condoms</div>
+          <div class="pc-tagline">Woman-controlled barrier method</div>
+          <div class="eff-bar"><div class="eff-row"><span>Efficacy</span><span>79&ndash;95%</span></div><div class="eff-track"><div class="eff-fill" style="width:84%"></div></div></div>
+          <div class="pc-stats">
+            <div class="stat-box"><div class="stat-lbl">Duration</div><div class="stat-val">Per use</div></div>
+            <div class="stat-box"><div class="stat-lbl">Prescription</div><div class="stat-val">Not needed</div></div>
+            <div class="stat-box"><div class="stat-lbl">STI Protection</div><div class="stat-val">&#10003; Yes</div></div>
+            <div class="stat-box"><div class="stat-lbl">Reversible</div><div class="stat-val">Immediate</div></div>
+          </div>
+          <div class="pc-effects"><div class="eff-lbl">Considerations</div><div class="eff-tags"><span class="eff-tag">Takes practice</span></div></div>
+          <div class="pc-ins-note">&#127973; No prescription needed &mdash; available OTC</div>
+          <div class="pc-price">KES 80&ndash;300 <small>/ pack</small></div>
+          <div class="pc-btns">
+            <a href="https://mydawa.com/products/search/family%20planning" target="_blank" class="btn-buy">&#128722; Buy on MYDAWA</a>
+            <a href="https://mydawa.com/login?ReturnUrl=%2Fmy-health-centre%2Fbook-a-consultation" target="_blank" class="btn-consult">&#128203; Consult</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="product-card visible" data-cat="emergency">
+        <div class="pc-head"><span class="pc-icon">&#9889;</span><span class="pc-badge">Emergency</span></div>
+        <div class="pc-body">
+          <div class="pc-name">Emergency Contraception</div>
+          <div class="pc-tagline">Postinor-2, Lydia &mdash; within 72 hours</div>
+          <div class="eff-bar"><div class="eff-row"><span>Efficacy</span><span>52&ndash;89%</span></div><div class="eff-track"><div class="eff-fill" style="width:70%"></div></div></div>
+          <div class="pc-stats">
+            <div class="stat-box"><div class="stat-lbl">Window</div><div class="stat-val">72&ndash;120 hrs</div></div>
+            <div class="stat-box"><div class="stat-lbl">Prescription</div><div class="stat-val">Not needed</div></div>
+            <div class="stat-box"><div class="stat-lbl">Regular use</div><div class="stat-val">Not advised</div></div>
+            <div class="stat-box"><div class="stat-lbl">Reversible</div><div class="stat-val">Yes</div></div>
+          </div>
+          <div class="pc-effects"><div class="eff-lbl">Possible Side Effects</div><div class="eff-tags"><span class="eff-tag">Nausea</span><span class="eff-tag">Delayed period</span></div></div>
+          <div class="pc-ins-note">&#127973; OTC &mdash; no prescription required</div>
+          <div class="pc-price">KES 100&ndash;350 <small>/ dose</small></div>
+          <div class="pc-btns">
+            <a href="https://mydawa.com/products/search/family%20planning" target="_blank" class="btn-buy">&#128722; Buy on MYDAWA</a>
+            <a href="https://mydawa.com/login?ReturnUrl=%2Fmy-health-centre%2Fbook-a-consultation" target="_blank" class="btn-consult">&#128203; Consult</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="product-card visible" data-cat="natural">
+        <div class="pc-head"><span class="pc-icon">&#127807;</span><span class="pc-badge">Natural</span></div>
+        <div class="pc-body">
+          <div class="pc-name">Fertility Awareness Method</div>
+          <div class="pc-tagline">Calendar, BBT &amp; cervical mucus tracking</div>
+          <div class="eff-bar"><div class="eff-row"><span>Efficacy</span><span>76&ndash;99%</span></div><div class="eff-track"><div class="eff-fill" style="width:85%"></div></div></div>
+          <div class="pc-stats">
+            <div class="stat-box"><div class="stat-lbl">Cost</div><div class="stat-val">Free</div></div>
+            <div class="stat-box"><div class="stat-lbl">Prescription</div><div class="stat-val">Not needed</div></div>
+            <div class="stat-box"><div class="stat-lbl">Hormonal</div><div class="stat-val">No</div></div>
+            <div class="stat-box"><div class="stat-lbl">Reversible</div><div class="stat-val">Immediate</div></div>
+          </div>
+          <div class="pc-effects"><div class="eff-lbl">Considerations</div><div class="eff-tags"><span class="eff-tag">Requires training</span><span class="eff-tag">Regular cycles needed</span></div></div>
+          <div class="pc-ins-note">&#127807; Use our cycle tracker below</div>
+          <div class="pc-price">Free <small>&mdash; use our tracker</small></div>
+          <div class="pc-btns">
+            <a href="#calendar" class="btn-buy">&#128197; Track My Cycle</a>
+            <a href="https://mydawa.com/login?ReturnUrl=%2Fmy-health-centre%2Fbook-a-consultation" target="_blank" class="btn-consult">&#128203; Consult</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="product-card visible" data-cat="natural">
+        <div class="pc-head"><span class="pc-icon">&#129354;</span><span class="pc-badge">Breastfeeding</span></div>
+        <div class="pc-body">
+          <div class="pc-name">LAM (Lactational Amenorrhoea)</div>
+          <div class="pc-tagline">Exclusively breastfeeding mothers &mdash; up to 6 months</div>
+          <div class="eff-bar"><div class="eff-row"><span>Efficacy</span><span>Up to 98%</span></div><div class="eff-track"><div class="eff-fill" style="width:96%"></div></div></div>
+          <div class="pc-stats">
+            <div class="stat-box"><div class="stat-lbl">Duration</div><div class="stat-val">Up to 6 months</div></div>
+            <div class="stat-box"><div class="stat-lbl">Cost</div><div class="stat-val">Free</div></div>
+            <div class="stat-box"><div class="stat-lbl">Hormonal</div><div class="stat-val">No</div></div>
+            <div class="stat-box"><div class="stat-lbl">Conditions</div><div class="stat-val">3 criteria</div></div>
+          </div>
+          <div class="pc-effects"><div class="eff-lbl">Three Criteria Required</div><div class="eff-tags"><span class="eff-tag">Exclusive breastfeeding</span><span class="eff-tag">No period yet</span><span class="eff-tag">Baby under 6 months</span></div></div>
+          <div class="pc-ins-note">&#127973; Discuss with clinician before relying on LAM</div>
+          <div class="pc-price">Free <small>&mdash; consult a clinician</small></div>
+          <div class="pc-btns">
+            <a href="https://mydawa.com/products/search/family%20planning" target="_blank" class="btn-buy">&#128722; MYDAWA</a>
+            <a href="https://mydawa.com/login?ReturnUrl=%2Fmy-health-centre%2Fbook-a-consultation" target="_blank" class="btn-consult">&#128203; Consult</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="product-card visible" data-cat="permanent">
+        <div class="pc-head"><span class="pc-icon">&#9877;</span><span class="pc-badge">Permanent</span></div>
+        <div class="pc-body">
+          <div class="pc-name">Female Sterilisation</div>
+          <div class="pc-tagline">Tubal ligation &mdash; for women done with childbearing</div>
+          <div class="eff-bar"><div class="eff-row"><span>Efficacy</span><span>99.5%</span></div><div class="eff-track"><div class="eff-fill" style="width:99%"></div></div></div>
+          <div class="pc-stats">
+            <div class="stat-box"><div class="stat-lbl">Duration</div><div class="stat-val">Permanent</div></div>
+            <div class="stat-box"><div class="stat-lbl">Procedure</div><div class="stat-val">Surgery</div></div>
+            <div class="stat-box"><div class="stat-lbl">Hormonal</div><div class="stat-val">No</div></div>
+            <div class="stat-box"><div class="stat-lbl">Reversible</div><div class="stat-val">Rarely</div></div>
+          </div>
+          <div class="pc-effects"><div class="eff-lbl">Considerations</div><div class="eff-tags"><span class="eff-tag">Surgical risks</span><span class="eff-tag">Recovery needed</span></div></div>
+          <div class="pc-ins-note">&#9989; NHIF covers at accredited surgical facilities</div>
+          <div class="pc-price">KES 5,000&ndash;20,000 <small>/ clinic</small></div>
+          <div class="pc-btns">
+            <a href="https://mydawa.com/products/search/family%20planning" target="_blank" class="btn-buy">&#128722; MYDAWA</a>
+            <a href="https://mydawa.com/login?ReturnUrl=%2Fmy-health-centre%2Fbook-a-consultation" target="_blank" class="btn-consult">&#128203; Consult</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="product-card visible" data-cat="permanent">
+        <div class="pc-head"><span class="pc-icon">&#128272;</span><span class="pc-badge">Partner</span></div>
+        <div class="pc-body">
+          <div class="pc-name">Vasectomy (Partner)</div>
+          <div class="pc-tagline">Simple outpatient procedure for your partner</div>
+          <div class="eff-bar"><div class="eff-row"><span>Efficacy</span><span>99.9%</span></div><div class="eff-track"><div class="eff-fill" style="width:99%"></div></div></div>
+          <div class="pc-stats">
+            <div class="stat-box"><div class="stat-lbl">Duration</div><div class="stat-val">Permanent</div></div>
+            <div class="stat-box"><div class="stat-lbl">Procedure</div><div class="stat-val">Minor surgery</div></div>
+            <div class="stat-box"><div class="stat-lbl">STI Protection</div><div class="stat-val">No</div></div>
+            <div class="stat-box"><div class="stat-lbl">Reversible</div><div class="stat-val">Rarely</div></div>
+          </div>
+          <div class="pc-effects"><div class="eff-lbl">Considerations</div><div class="eff-tags"><span class="eff-tag">Short recovery</span><span class="eff-tag">Minor bruising</span></div></div>
+          <div class="pc-ins-note">&#9989; NHIF covers at accredited facilities</div>
+          <div class="pc-price">KES 5,000&ndash;15,000 <small>/ clinic</small></div>
+          <div class="pc-btns">
+            <a href="https://mydawa.com/products/search/family%20planning" target="_blank" class="btn-buy">&#128722; MYDAWA</a>
+            <a href="https://mydawa.com/login?ReturnUrl=%2Fmy-health-centre%2Fbook-a-consultation" target="_blank" class="btn-consult">&#128203; Consult</a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- COMPARE -->
+<section class="compare-section" id="compare">
+  <div class="section-max">
+    <div class="section-eyebrow">Side-by-Side</div>
+    <h2 class="section-h2">Compare all methods <em>at a glance</em></h2>
+    <div class="compare-wrap">
+      <table class="compare-table">
+        <thead><tr><th>Method</th><th>Efficacy</th><th>Duration</th><th>Hormonal</th><th>STI Protection</th><th>Reversible</th><th>Cost (KES)</th><th>Insurance</th></tr></thead>
+        <tbody>
+          <tr><td><strong>Combined Pill</strong></td><td>91&ndash;99%</td><td>Daily</td><td><span class="badge-y">Yes</span></td><td><span class="badge-r">No</span></td><td><span class="badge-g">Immediate</span></td><td>150&ndash;400/mo</td><td><span class="badge-y">Private</span></td></tr>
+          <tr><td><strong>Mini-Pill (POP)</strong></td><td>87&ndash;99%</td><td>Daily</td><td><span class="badge-y">Yes</span></td><td><span class="badge-r">No</span></td><td><span class="badge-g">Immediate</span></td><td>150&ndash;350/mo</td><td><span class="badge-y">Private</span></td></tr>
+          <tr><td><strong>Depo Injection</strong></td><td>94&ndash;99%</td><td>3 months</td><td><span class="badge-y">Yes</span></td><td><span class="badge-r">No</span></td><td><span class="badge-y">Delayed 6&ndash;18mo</span></td><td>300&ndash;700</td><td><span class="badge-g">NHIF &#10003;</span></td></tr>
+          <tr><td><strong>Sayana Press</strong></td><td>94&ndash;99%</td><td>3 months</td><td><span class="badge-y">Yes</span></td><td><span class="badge-r">No</span></td><td><span class="badge-y">Delayed</span></td><td>500&ndash;900</td><td><span class="badge-y">Private</span></td></tr>
+          <tr><td><strong>Implant</strong></td><td>99.9%</td><td>3&ndash;5 years</td><td><span class="badge-y">Yes</span></td><td><span class="badge-r">No</span></td><td><span class="badge-g">Yes</span></td><td>1,500&ndash;5,000</td><td><span class="badge-g">NHIF &#10003;</span></td></tr>
+          <tr><td><strong>Copper IUD</strong></td><td>99.2&ndash;99.9%</td><td>Up to 10 yrs</td><td><span class="badge-g">No</span></td><td><span class="badge-r">No</span></td><td><span class="badge-g">Yes</span></td><td>1,000&ndash;4,000</td><td><span class="badge-g">NHIF &#10003;</span></td></tr>
+          <tr><td><strong>Hormonal IUD</strong></td><td>&gt;99%</td><td>5 years</td><td><span class="badge-y">Local only</span></td><td><span class="badge-r">No</span></td><td><span class="badge-g">Yes</span></td><td>3,000&ndash;8,000</td><td><span class="badge-y">Private</span></td></tr>
+          <tr><td><strong>Male Condom</strong></td><td>82&ndash;98%</td><td>Per use</td><td><span class="badge-g">No</span></td><td><span class="badge-g">&#10003; Yes</span></td><td><span class="badge-g">Immediate</span></td><td>50&ndash;200/pk</td><td><span class="badge-g">OTC</span></td></tr>
+          <tr><td><strong>Female Condom</strong></td><td>79&ndash;95%</td><td>Per use</td><td><span class="badge-g">No</span></td><td><span class="badge-g">&#10003; Yes</span></td><td><span class="badge-g">Immediate</span></td><td>80&ndash;300/pk</td><td><span class="badge-g">OTC</span></td></tr>
+          <tr><td><strong>Emergency Pill</strong></td><td>52&ndash;89%</td><td>One-time</td><td><span class="badge-y">Yes</span></td><td><span class="badge-r">No</span></td><td><span class="badge-g">Yes</span></td><td>100&ndash;350</td><td><span class="badge-g">OTC</span></td></tr>
+          <tr><td><strong>Fertility Awareness</strong></td><td>76&ndash;99%</td><td>Ongoing</td><td><span class="badge-g">No</span></td><td><span class="badge-r">No</span></td><td><span class="badge-g">Immediate</span></td><td>Free</td><td><span class="badge-g">N/A</span></td></tr>
+          <tr><td><strong>Tubal Ligation</strong></td><td>99.5%</td><td>Permanent</td><td><span class="badge-g">No</span></td><td><span class="badge-r">No</span></td><td><span class="badge-r">No</span></td><td>5,000&ndash;20,000</td><td><span class="badge-g">NHIF &#10003;</span></td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div style="text-align:center;margin-top:2rem;">
+      <a href="https://mydawa.com/login?ReturnUrl=%2Fmy-health-centre%2Fbook-a-consultation" target="_blank" class="btn-teal">&#128203; Book a Consultation to Confirm Your Insurance Benefits</a>
+    </div>
+  </div>
+</section>
+
+<!-- CALENDAR -->
+<section class="calendar-section" id="calendar">
+  <div class="section-max">
+    <div class="section-eyebrow">Cycle Tracking</div>
+    <h2 class="section-h2">Know your cycle, <em>own your health</em></h2>
+    <p class="section-p">Track your fertile window, plan around your contraceptive method, and understand your body better.</p>
+    <div class="cal-grid">
+      <div class="calendar-widget">
+        <div class="cal-head">
+          <button class="cal-nav-btn" id="prevMonth">&#8249;</button>
+          <div class="cal-month-lbl" id="calMonthDisplay"></div>
+          <button class="cal-nav-btn" id="nextMonth">&#8250;</button>
+        </div>
+        <div class="cal-days-grid" id="calDaysGrid">
+          <div class="cal-dn">Sun</div><div class="cal-dn">Mon</div><div class="cal-dn">Tue</div><div class="cal-dn">Wed</div><div class="cal-dn">Thu</div><div class="cal-dn">Fri</div><div class="cal-dn">Sat</div>
+        </div>
+        <div class="cal-legend">
+          <div class="legend-item"><div class="legend-dot" style="background:#FFE4E6"></div> Period</div>
+          <div class="legend-item"><div class="legend-dot" style="background:#D1FAE5"></div> Ovulation</div>
+          <div class="legend-item"><div class="legend-dot" style="background:#FEF3C7"></div> Fertile</div>
+          <div class="legend-item"><div class="legend-dot" style="border:2px solid var(--teal);background:transparent"></div> Today</div>
+        </div>
+      </div>
+      <div class="cal-calc">
+        <h3>Calculate My Cycle</h3>
+        <div class="cal-input-grp"><label>First day of last period</label><input type="date" id="lastPeriodDate"></div>
+        <div class="cal-input-grp"><label>Cycle length (days)</label><input type="number" id="cycleLength" value="28" min="20" max="45"></div>
+        <div class="cal-input-grp"><label>Period duration (days)</label><input type="number" id="periodDuration" value="5" min="2" max="10"></div>
+        <button class="btn-cal" onclick="calculateCycle()">Calculate My Dates &#127800;</button>
+        <div class="cal-result" id="calResult"></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TESTIMONIALS -->
+<section class="testi-section" id="stories">
+  <div class="section-max">
+    <div class="section-eyebrow" style="background:rgba(233,30,140,0.15);color:#F48FB1;">Real Stories</div>
+    <h2 class="section-h2" style="color:white;">She chose. <em style="color:#F48FB1;">She saved.</em></h2>
+    <p style="color:rgba(255,255,255,0.6);font-size:0.95rem;margin-bottom:0;">Women who used their insurance for family planning on MYDAWA.</p>
+    <div class="testi-grid">
+      <div class="testi-card">
+        <div class="testi-card-quote">&#8220;</div>
+        <div class="testi-card-text">I called my insurance provider before my clinic visit. They confirmed the IUD was covered. I paid zero out of pocket. I only wish I had known sooner &mdash; I had been buying pills every month for three years.</div>
+        <div class="star-row">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+        <div class="testi-card-person"><div class="testi-card-avatar">&#128105;&#127998;</div><div><div class="testi-card-name">Grace Akinyi</div><div class="testi-card-loc">Kisumu &middot; Copper IUD via Insurance</div></div></div>
+      </div>
+      <div class="testi-card">
+        <div class="testi-card-quote">&#8220;</div>
+        <div class="testi-card-text">The MYDAWA consultation was so private and professional. Nurse Sally guided me through the implant procedure step by step. My insurer covered the whole thing.</div>
+        <div class="star-row">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+        <div class="testi-card-person"><div class="testi-card-avatar">&#128105;&#127999;</div><div><div class="testi-card-name">Faith Wanjiku</div><div class="testi-card-loc">Nairobi &middot; Implant via Insurance</div></div></div>
+      </div>
+      <div class="testi-card">
+        <div class="testi-card-quote">&#8220;</div>
+        <div class="testi-card-text">I was using Depo and experiencing side effects no one warned me about. The MYDAWA clinician helped me switch to the pill. My medical scheme covered the consultation entirely.</div>
+        <div class="star-row">&#9733;&#9733;&#9733;&#9733;&#9654;</div>
+        <div class="testi-card-person"><div class="testi-card-avatar">&#128105;&#127997;</div><div><div class="testi-card-name">Wanjiru Kamau</div><div class="testi-card-loc">Nyeri &middot; Consultation via Insurance</div></div></div>
+      </div>
+      <div class="testi-card">
+        <div class="testi-card-quote">&#8220;</div>
+        <div class="testi-card-text">Ordering through MYDAWA was discreet and the delivery was fast. The cycle tracker helps me stay on top of my method. I had no idea family planning was this accessible.</div>
+        <div class="star-row">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+        <div class="testi-card-person"><div class="testi-card-avatar">&#128105;&#127998;</div><div><div class="testi-card-name">Halima Said</div><div class="testi-card-loc">Mombasa &middot; Emergency contraception</div></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="faq-section" id="faq">
+  <div class="section-max">
+    <div class="section-eyebrow">FAQs</div>
+    <h2 class="section-h2">Questions women ask. <em>Honest answers.</em></h2>
+    <div class="faq-grid">
+      <div class="faq-item" onclick="toggleFAQ(this)"><div class="faq-q">Does my NHIF cover family planning?<span class="faq-icon">+</span></div><div class="faq-a">NHIF covers many family planning services at accredited facilities, including IUD insertion, sterilisation procedures, injectables, and clinical consultations. Coverage depends on your contribution level and the facility. Book a MYDAWA consultation and our clinicians will confirm your specific entitlements before your visit.</div></div>
+      <div class="faq-item" onclick="toggleFAQ(this)"><div class="faq-q">What about private insurance coverage?<span class="faq-icon">+</span></div><div class="faq-a">Many private health schemes (AAR, Jubilee, CIC, GA Insurance, etc.) include a maternity or wellness benefit that covers contraceptives, consultations, and clinical procedures. Coverage varies significantly by plan. Check your policy document or call your insurer's customer service to confirm.</div></div>
+      <div class="faq-item" onclick="toggleFAQ(this)"><div class="faq-q">Which method is best if I want children in 1&ndash;2 years?<span class="faq-icon">+</span></div><div class="faq-a">Short-acting reversible methods are best: the combined pill, mini-pill, condoms, or injectables. Fertility returns quickly after stopping. Avoid Depo-Provera if you plan to conceive soon as it can delay fertility return by 6&ndash;18 months.</div></div>
+      <div class="faq-item" onclick="toggleFAQ(this)"><div class="faq-q">Can I use family planning while breastfeeding?<span class="faq-icon">+</span></div><div class="faq-a">Yes. Safe options while breastfeeding include: the progestogen-only pill, copper IUD, implant, condoms, and LAM (if you meet all 3 criteria). Avoid combined pills in the first 6 months as estrogen may reduce milk supply.</div></div>
+      <div class="faq-item" onclick="toggleFAQ(this)"><div class="faq-q">Does family planning cause permanent infertility?<span class="faq-icon">+</span></div><div class="faq-a">No. All modern hormonal methods (except sterilisation) are fully reversible. Fertility returns immediately after stopping pills, or after removing an implant or IUD. Depo-Provera may delay return by 6&ndash;18 months.</div></div>
+      <div class="faq-item" onclick="toggleFAQ(this)"><div class="faq-q">Which method also protects against STIs?<span class="faq-icon">+</span></div><div class="faq-a">Only male and female condoms protect against both STIs and pregnancy. Using condoms alongside another method like the pill or implant is called &ldquo;dual protection&rdquo; &mdash; the gold standard for comprehensive reproductive health.</div></div>
+      <div class="faq-item" onclick="toggleFAQ(this)"><div class="faq-q">Can I get family planning privately, without my partner knowing?<span class="faq-icon">+</span></div><div class="faq-a">Yes. You have the legal right to access family planning privately. MYDAWA offers discreet delivery and private online consultations. Your health decisions belong to you.</div></div>
+      <div class="faq-item" onclick="toggleFAQ(this)"><div class="faq-q">How does emergency contraception work?<span class="faq-icon">+</span></div><div class="faq-a">Postinor-2 and Lydia work by delaying or preventing ovulation. They do NOT terminate an existing pregnancy. Most effective within 24 hours (89%) but can be taken up to 72&ndash;120 hours after unprotected sex. No prescription needed &mdash; order on MYDAWA.</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- COMMUNITY & CONSULT -->
+<section class="community-section" id="community">
+  <div class="section-max">
+    <div style="text-align:center;margin-bottom:3rem;">
+      <div class="section-eyebrow" style="background:rgba(255,255,255,0.15);color:rgba(255,255,255,0.9);">Get Support</div>
+      <h2 class="section-h2" style="color:white;">You deserve expert support. <em>Get it now.</em></h2>
+    </div>
+    <div class="comm-grid" style="grid-template-columns:repeat(3,1fr);">
+      <div class="comm-card">
+        <span class="comm-icon">&#128203;</span>
+        <h3>Book a Consultation</h3>
+        <p>Private, professional one-on-one with a MYDAWA trained healthcare provider. Many consultations are covered by your insurance.</p>
+        <a href="https://mydawa.com/login?ReturnUrl=%2Fmy-health-centre%2Fbook-a-consultation" target="_blank" class="btn-comm">Book on MYDAWA</a>
+      </div>
+      <div class="comm-card">
+        <span class="comm-icon">&#128172;</span>
+        <h3>Chat on WhatsApp</h3>
+        <p>Reach us on WhatsApp for quick questions, support, or help navigating your insurance and family planning options.</p>
+        <a href="https://wa.me/254700000000?text=Hi!+I%27d+like+help+with+family+planning+on+MYDAWA" target="_blank" class="btn-comm" style="background:#25D366;color:white;">&#128172; Chat on WhatsApp</a>
+      </div>
+      <div class="comm-card">
+        <span class="comm-icon">&#128178;</span>
+        <h3>Pay with M-Pesa</h3>
+        <p>Shop for family planning products on MYDAWA and pay conveniently with M-Pesa — fast, secure, and no cash needed.</p>
+        <a href="https://mydawa.com/products/search/family%20planning" target="_blank" class="btn-comm" style="background:#2C4A6E;color:white;">&#128178; Pay with M-Pesa</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-inner">
+    <div class="footer-grid">
+      <div>
+        <div class="footer-brand-name"><span class="teal">MY</span>DAWA</div>
+        <p class="footer-brand-desc">Powering access to family planning through insurance. A MYDAWA initiative in partnership with Jhpiego — an affiliate of Johns Hopkins University.</p>
+        <div class="footer-badge">&#127973; NHIF &amp; Insurance Accepted &middot; Jhpiego Partnership</div>
+      </div>
+      <div class="footer-col">
+        <h5>Family Planning</h5>
+        <ul>
+          <li><a href="#products">All Methods</a></li>
+          <li><a href="#products">Long-Acting Methods</a></li>
+          <li><a href="#products">Barrier Methods</a></li>
+          <li><a href="#products">Emergency Contraception</a></li>
+          <li><a href="#compare">Compare Methods</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h5>Insurance</h5>
+        <ul>
+          <li><a href="#insurance">How It Works</a></li>
+          <li><a href="https://mydawa.com/login?ReturnUrl=%2Fmy-health-centre%2Fbook-a-consultation" target="_blank">Book a Consultation</a></li>
+          <li><a href="#faq">Insurance FAQs</a></li>
+          <li><a href="#ask-sally">Ask Nurse Sally</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h5>Shop &amp; Connect</h5>
+        <ul>
+          <li><a href="https://mydawa.com/products/search/family%20planning" target="_blank">Shop on MYDAWA</a></li>
+          <li><a href="https://wa.me/254700000000" target="_blank">WhatsApp Support</a></li>
+          <li><a href="https://www.jhpiego.org" target="_blank">About Jhpiego</a></li>
+          <li><a href="#">Privacy Policy</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>&copy; 2026 MYDAWA Limited. All rights reserved. Campaign in partnership with Jhpiego.</span>
+      <span>Built with <a href="https://www.jhpiego.org">Jhpiego</a></span>
+    </div>
+    <div class="footer-disc">This platform provides general information only and does not constitute medical advice. Insurance coverage information is indicative &mdash; confirm with your insurer. Always consult a qualified healthcare provider before starting or changing any family planning method. Content reviewed by Jhpiego-trained clinicians.</div>
+  </div>
+</footer>
+
+<!-- FLOATING FAB -->
+<div class="chat-fab">
+  <div class="fab-label">Ask Nurse Sally</div>
+  <button class="fab-btn" onclick="toggleFabChat()">&#128172;</button>
+</div>
+<div class="fab-chat-window" id="fabChatWindow">
+  <div class="fab-chat-head">
+    <div class="fab-nurse-av"><img src="https://images.unsplash.com/photo-1643297654416-05795d62e39c?w=88&h=88&fit=crop&crop=faces" alt="Nurse Sally" style="width:100%;height:100%;object-fit:cover;"></div>
+    <div class="fab-nurse-info">
+      <h4>Nurse Sally</h4>
+      <div class="sub">Reproductive Health Specialist &middot; MYDAWA</div>
+    </div>
+    <button class="fab-close" onclick="toggleFabChat()">&#215;</button>
+  </div>
+  <div class="fab-msgs" id="fabChatMsgs">
+    <div class="msg-wrap bot"><div class="msg-label">Nurse Sally</div><div class="msg-bubble">Hello! I'm Nurse Sally. I can help you with family planning options, insurance coverage, or booking a consultation. What would you like to know?</div></div>
+  </div>
+  <div class="fab-quick" id="fabQuickReplies">
+    <button class="qr-btn" onclick="sendFabQuick('Does my insurance cover family planning?')">&#127973; Insurance</button>
+    <button class="qr-btn" onclick="sendFabQuick('Long-term contraception options')">Long-term</button>
+    <button class="qr-btn" onclick="sendFabQuick('Book a consultation')">Book consult</button>
+  </div>
+  <div class="fab-input-row">
+    <input class="chat-input" id="fabInput" placeholder="Ask anything..." onkeydown="if(event.key==='Enter')sendFabMessage()">
+    <button class="chat-send-btn" onclick="sendFabMessage()">&#10148;</button>
+  </div>
+</div>
+
+<script>
+// ── PRODUCT FILTER ──
+function filterP(cat,btn){
+  document.querySelectorAll('.tab-btn').forEach(b=>b.classList.remove('active'));
+  btn.classList.add('active');
+  document.querySelectorAll('.product-card').forEach(c=>{
+    if(cat==='all'||c.dataset.cat===cat)c.classList.add('visible');
+    else c.classList.remove('visible');
+  });
+}
+
+// ── FAQ ──
+function toggleFAQ(el){
+  const open=el.classList.contains('open');
+  document.querySelectorAll('.faq-item').forEach(i=>i.classList.remove('open'));
+  if(!open)el.classList.add('open');
+}
+
+// ── CALENDAR ──
+const months=['January','February','March','April','May','June','July','August','September','October','November','December'];
+let calYear=2026,calMonth=5,pDays=[],fDays=[],oDay=null;
+function renderCal(){
+  document.getElementById('calMonthDisplay').textContent=months[calMonth]+' '+calYear;
+  const g=document.getElementById('calDaysGrid');
+  g.querySelectorAll('.cal-day').forEach(d=>d.remove());
+  const fd=new Date(calYear,calMonth,1).getDay();
+  const dim=new Date(calYear,calMonth+1,0).getDate();
+  const t=new Date();
+  for(let i=0;i<fd;i++){const e=document.createElement('div');e.className='cal-day empty';g.appendChild(e);}
+  for(let d=1;d<=dim;d++){
+    const c=document.createElement('div');c.className='cal-day';c.textContent=d;
+    if(t.getDate()===d&&t.getMonth()===calMonth&&t.getFullYear()===calYear)c.classList.add('today');
+    if(pDays.includes(d))c.classList.add('period');
+    if(fDays.includes(d))c.classList.add('fertile');
+    if(oDay===d)c.classList.add('ovulation');
+    c.addEventListener('click',()=>{document.querySelectorAll('.cal-day').forEach(x=>x.classList.remove('selected'));c.classList.add('selected');});
+    g.appendChild(c);
+  }
+}
+document.getElementById('prevMonth').addEventListener('click',()=>{calMonth--;if(calMonth<0){calMonth=11;calYear--;}renderCal();});
+document.getElementById('nextMonth').addEventListener('click',()=>{calMonth++;if(calMonth>11){calMonth=0;calYear++;}renderCal();});
+renderCal();
+function calculateCycle(){
+  const lp=document.getElementById('lastPeriodDate').value;
+  const cl=parseInt(document.getElementById('cycleLength').value);
+  const pl=parseInt(document.getElementById('periodDuration').value);
+  if(!lp){alert('Please enter your last period date');return;}
+  const s=new Date(lp);
+  const np=new Date(s);np.setDate(s.getDate()+cl);
+  const ov=new Date(s);ov.setDate(s.getDate()+cl-14);
+  const fs=new Date(ov);fs.setDate(ov.getDate()-5);
+  const fe=new Date(ov);fe.setDate(ov.getDate()+1);
+  pDays=[];fDays=[];
+  for(let i=0;i<pl;i++){const d=new Date(s);d.setDate(s.getDate()+i);if(d.getMonth()===np.getMonth()&&d.getFullYear()===np.getFullYear())pDays.push(d.getDate());}
+  for(let d=new Date(fs);d<=fe;d.setDate(d.getDate()+1)){if(d.getMonth()===np.getMonth()&&d.getFullYear()===np.getFullYear())fDays.push(d.getDate());}
+  if(ov.getMonth()===np.getMonth()&&ov.getFullYear()===np.getFullYear())oDay=ov.getDate();
+  calMonth=np.getMonth();calYear=np.getFullYear();renderCal();
+  const fmt=d=>d.toLocaleDateString('en-KE',{day:'numeric',month:'long',year:'numeric'});
+  const r=document.getElementById('calResult');
+  r.style.display='block';
+  r.innerHTML='<strong>&#127800; Next period:</strong> around '+fmt(np)+'<br><strong>&#127807; Fertile window:</strong> '+fmt(fs)+' &ndash; '+fmt(fe)+'<br><strong>&#127775; Ovulation:</strong> around '+fmt(ov)+'<br><br><em style="font-size:0.75rem;color:var(--teal-dark);">This is an estimate. Use as a guide, not a guarantee of protection.</em>';
+}
+
+// ── SALLY BRAIN ──
+const kb={
+  insurance:['insurance','nhif','cover','covered','insur','scheme','benefit','pay','cost'],
+  greet:['hi','hello','habari','hey','good morning','good afternoon','welcome'],
+  pill:['pill','pills','oral','combined','mini','coc','pop'],
+  injection:['injection','depo','injectable','shot','sayana'],
+  implant:['implant','implanon','jadelle'],
+  iud:['iud','coil','copper','mirena','intrauterine'],
+  condom:['condom','condoms','barrier'],
+  emergency:['emergency','postinor','lydia','morning after'],
+  natural:['natural','calendar','fam','rhythm','lam','breastfeeding','lactation'],
+  permanent:['permanent','sterilisation','tubal','vasectomy','ligation'],
+  side:['side effect','effect','bleed','pain','weight','spotting','nausea'],
+  consult:['consult','doctor','nurse','appointment','book','clinic','see a'],
+  whatsapp:['whatsapp','chat','wa','message'],
+  buy:['buy','purchase','order','shop','where','get','price'],
+  period:['period','cycle','menstrual','menstruation','track'],
+};
+function sallyReply(msg){
+  const m=msg.toLowerCase();
+  if(kb.insurance.some(w=>m.includes(w)))return "Good question. NHIF covers IUD insertion, sterilisation, and injectables at accredited facilities. Many private schemes (AAR, Jubilee, CIC, GA) include contraception under wellness or maternity benefits. &#127973; The fastest way to confirm: <strong>book a MYDAWA consultation</strong> and our clinicians will verify your specific benefits before your visit. <a href='https://mydawa.com/login?ReturnUrl=%2Fmy-health-centre%2Fbook-a-consultation' target='_blank' style='color:var(--teal);font-weight:600;'>Book here &rarr;</a>";
+  if(kb.greet.some(w=>m.includes(w)))return "Hello! I'm Nurse Sally, a reproductive health specialist at MYDAWA. I'm here to guide you on family planning methods, help you understand your insurance coverage, or connect you with a clinician. What can I help you with today?";
+  if(kb.consult.some(w=>m.includes(w)))return "You can book a private clinical consultation directly on MYDAWA &mdash; available via video call, WhatsApp, or in-person at partner clinics. Many consultations are covered by NHIF and private insurance. &#128203; <a href='https://mydawa.com/login?ReturnUrl=%2Fmy-health-centre%2Fbook-a-consultation' target='_blank' style='color:var(--teal);font-weight:600;'>Book your consultation here</a>.";
+  if(kb.whatsapp.some(w=>m.includes(w)))return "You can reach the MYDAWA team directly on WhatsApp for quick support. &#128172; <a href='https://wa.me/254700000000?text=Hi!+I+need+help+with+family+planning' target='_blank' style='color:var(--teal);font-weight:600;'>Chat on WhatsApp &rarr;</a>";
+  if(kb.buy.some(w=>m.includes(w)))return "You can purchase family planning products discreetly on MYDAWA. &#128722; <a href='https://mydawa.com/products/search/family%20planning' target='_blank' style='color:var(--teal);font-weight:600;'>Shop the full range here</a>. Pills, emergency contraception, and condoms are available OTC. For IUDs, implants, and injections, a clinical consultation is required. Insurance may cover your purchase!";
+  if(kb.emergency.some(w=>m.includes(w)))return "Emergency contraception (Postinor-2, Lydia) is most effective within 24 hours but can be taken up to 72&ndash;120 hours after unprotected sex. It works by delaying ovulation &mdash; it does <em>not</em> terminate a pregnancy. No prescription needed. <a href='https://mydawa.com/products/search/family%20planning' target='_blank' style='color:var(--teal);font-weight:600;'>Order on MYDAWA now &rarr;</a>";
+  if(kb.implant.some(w=>m.includes(w)))return "The implant (Implanon/Jadelle) is 99.9% effective for 3&ndash;5 years. A small rod is placed under the skin of the upper arm by a trained clinician. It commonly causes irregular bleeding in the first few months, which usually settles. Fertility returns quickly after removal. Cost: KES 1,500&ndash;5,000. <strong>NHIF and private schemes often cover implant insertion.</strong> <a href='https://mydawa.com/login?ReturnUrl=%2Fmy-health-centre%2Fbook-a-consultation' target='_blank' style='color:var(--teal);font-weight:600;'>Book a consultation to confirm your cover.</a>";
+  if(kb.iud.some(w=>m.includes(w)))return "IUDs are placed inside the uterus by a trained provider. The <strong>Copper IUD</strong> is hormone-free and lasts up to 10 years. The <strong>Mirena</strong> releases a low local dose and often lightens periods &mdash; it lasts 5 years. Both are >99% effective and reversible. <strong>NHIF covers Copper IUD insertion at accredited clinics.</strong> <a href='https://mydawa.com/login?ReturnUrl=%2Fmy-health-centre%2Fbook-a-consultation' target='_blank' style='color:var(--teal);font-weight:600;'>Book a consultation to confirm your cover.</a>";
+  if(kb.injection.some(w=>m.includes(w)))return "Depo-Provera is given every 3 months at a clinic &mdash; 94&ndash;99% effective. It commonly stops periods. Fertility may take 6&ndash;18 months to return after stopping. Sayana Press is a self-injectable version. NHIF covers injectables at accredited facilities. <a href='https://mydawa.com/login?ReturnUrl=%2Fmy-health-centre%2Fbook-a-consultation' target='_blank' style='color:var(--teal);font-weight:600;'>Book a consultation.</a>";
+  if(kb.pill.some(w=>m.includes(w)))return "The <strong>combined pill</strong> is taken daily and is 91&ndash;99% effective. The <strong>mini-pill</strong> is safe while breastfeeding. Both require a prescription. Private schemes often include pills under contraceptive benefits. <a href='https://mydawa.com/products/search/family%20planning' target='_blank' style='color:var(--teal);font-weight:600;'>Order on MYDAWA once prescribed &rarr;</a>";
+  if(kb.condom.some(w=>m.includes(w)))return "Condoms &mdash; male and female &mdash; are the <strong>only method that protects against both STIs and pregnancy</strong>. Combining condoms with another method is called 'dual protection.' Available without prescription &mdash; <a href='https://mydawa.com/products/search/family%20planning' target='_blank' style='color:var(--teal);font-weight:600;'>order on MYDAWA</a>.";
+  if(kb.side.some(w=>m.includes(w)))return "Side effects vary by method: <strong>pills</strong> &mdash; nausea, mood changes (usually settles in 3 months); <strong>implant/IUD</strong> &mdash; irregular bleeding early on; <strong>Depo</strong> &mdash; periods often stop, possible weight changes. If a side effect is affecting your quality of life, there's almost certainly a better option for you. <a href='https://mydawa.com/login?ReturnUrl=%2Fmy-health-centre%2Fbook-a-consultation' target='_blank' style='color:var(--teal);font-weight:600;'>Book a consultation</a> to find it.";
+  if(kb.natural.some(w=>m.includes(w)))return "Natural methods like FAM (calendar, BBT, cervical mucus) and LAM (for breastfeeding mothers) can be effective with proper training. Use the cycle tracker on this page to get started. I recommend a clinical consultation before relying solely on natural methods. <a href='https://mydawa.com/login?ReturnUrl=%2Fmy-health-centre%2Fbook-a-consultation' target='_blank' style='color:var(--teal);font-weight:600;'>Book here &rarr;</a>";
+  if(kb.period.some(w=>m.includes(w)))return "Use the cycle tracker on this page to calculate your next period, fertile window, and ovulation date. Just scroll down to the calendar section. Tracking your cycle is a great first step in understanding your reproductive health.";
+  const def=["That's a good question. To give you the most helpful guidance, could you share a bit more context? For example: are you asking about a specific method, insurance coverage, or how to access services?","I want to make sure I give you accurate information. Could you tell me a little more about what you're looking for?","To help you best, I need a bit more detail. Are you exploring your options for the first time, or do you have a specific method or concern in mind?"];
+  return def[Math.floor(Math.random()*def.length)];
+}
+
+// ── MAIN (inline) CHAT ──
+function addMainMsg(text,role){
+  const msgs=document.getElementById('mainChatMsgs');
+  const d=document.createElement('div');d.className='msg-wrap '+role;
+  d.innerHTML=(role==='bot'?'<div class="msg-label">Nurse Sally</div>':'')+'<div class="msg-bubble">'+text+'</div>';
+  msgs.appendChild(d);msgs.scrollTop=msgs.scrollHeight;
+  const qr=document.getElementById('mainQuickReplies');if(qr)qr.style.display='none';
+}
+function sendMainMessage(){const i=document.getElementById('mainChatInput');const t=i.value.trim();if(!t)return;addMainMsg(t,'user');i.value='';setTimeout(()=>addMainMsg(sallyReply(t),'bot'),650);}
+function sendMainQuick(t){addMainMsg(t,'user');setTimeout(()=>addMainMsg(sallyReply(t),'bot'),650);}
+
+// ── FAB CHAT ──
+function addFabMsg(text,role){
+  const msgs=document.getElementById('fabChatMsgs');
+  const d=document.createElement('div');d.className='msg-wrap '+role;
+  d.innerHTML=(role==='bot'?'<div class="msg-label">Nurse Sally</div>':'')+'<div class="msg-bubble">'+text+'</div>';
+  msgs.appendChild(d);msgs.scrollTop=msgs.scrollHeight;
+  const qr=document.getElementById('fabQuickReplies');if(qr)qr.style.display='none';
+}
+function sendFabMessage(){const i=document.getElementById('fabInput');const t=i.value.trim();if(!t)return;addFabMsg(t,'user');i.value='';setTimeout(()=>addFabMsg(sallyReply(t),'bot'),600);}
+function sendFabQuick(t){addFabMsg(t,'user');setTimeout(()=>addFabMsg(sallyReply(t),'bot'),600);}
+function toggleFabChat(){document.getElementById('fabChatWindow').classList.toggle('open');}
+
+// ── VOICE ──
+function activateVoice(){
+  if('webkitSpeechRecognition'in window||'SpeechRecognition'in window){
+    const SR=window.SpeechRecognition||window.webkitSpeechRecognition;
+    const r=new SR();r.lang='en-KE';
+    r.onresult=(e)=>{const t=e.results[0][0].transcript;addMainMsg(t,'user');setTimeout(()=>addMainMsg(sallyReply(t),'bot'),700);};
+    r.onerror=()=>{};
+    r.start();
+  }else{document.getElementById('mainChatInput').focus();}
+}
+</script>
+</body>
+</html>
